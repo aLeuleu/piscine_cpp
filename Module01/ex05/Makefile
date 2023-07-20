@@ -1,5 +1,5 @@
 
-NAME=replace
+NAME=harl
 
 SRC= main.cpp
 

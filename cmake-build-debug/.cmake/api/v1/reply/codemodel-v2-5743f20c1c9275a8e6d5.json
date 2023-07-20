@@ -1,0 +1,132 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.24"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "cpp",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "01_00::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-01_00-Debug-1e50d771a8bd4a33bade.json",
+					"name" : "01_00",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "01_01::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-01_01-Debug-80aabefc8f7f84762cdc.json",
+					"name" : "01_01",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "01_02::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-01_02-Debug-9c3ec8f838b8578c6da9.json",
+					"name" : "01_02",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "01_03::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-01_03-Debug-7e07eb797bb59df125fb.json",
+					"name" : "01_03",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "01_04::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-01_04-Debug-dc985b9a9a0c78feb87e.json",
+					"name" : "01_04",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "01_05::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-01_05-Debug-ee371e19355ff29ad688.json",
+					"name" : "01_05",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "02_00::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-02_00-Debug-c01d70b9a8119dde6084.json",
+					"name" : "02_00",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ex00::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ex00-Debug-7a76b2c6d06671261aef.json",
+					"name" : "ex00",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ex01::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ex01-Debug-c76752e0258803d59fa8.json",
+					"name" : "ex01",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/aurelienlevra/CLionProjects/cpp/cmake-build-debug",
+		"source" : "/Users/aurelienlevra/CLionProjects/cpp"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}

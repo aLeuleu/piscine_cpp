@@ -1,10 +1,11 @@
 
-NAME=HI_THIS_IS_BRAIN
+NAME=Unnecessary_violence
 
-SRC=main.cpp zombie.cpp zombieHorde.cpp
+SRC= main.cpp Weapon.cpp \
+     HumanA.cpp HumanB.cpp
 
 all:
-	@clang++ -Wall -Wextra -Werror $(SRC) -o $(NAME) -std=c++98
+	@clang++ -Wall -Wextra -Werror -o $(NAME) $(SRC) -std=c++98
 
 clean:
 	@rm -rf $(NAME)
