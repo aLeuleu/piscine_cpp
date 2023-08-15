@@ -4,19 +4,22 @@ NAME=Unnecessary_violence
 SRC= main.cpp Weapon.cpp \
      HumanA.cpp HumanB.cpp
 
-all:
-	@clang++ -Wall -Wextra -Werror -o $(NAME) $(SRC) -std=c++98
+OBJ=$(SRC:.cpp=.o)
+
+all: $(NAME)
+
+$(NAME): $(OBJ)
+	clang++ -Wall -Wextra -Werror -o $(NAME) $(OBJ) -std=c++98
+
+%.o: %.cpp
+	clang++ -Wall -Wextra -Werror -c $< -o $@ -std=c++98
 
 clean:
-	@rm -rf $(NAME)
+	rm -rf $(NAME)
 
 fclean: clean
+	rm -rf $(OBJ)
 
 re: fclean all
 
-run: all
-	./$(NAME)
-	leaks --atExit -- ./$(NAME) | tail -n 2
-	make clean
-
-.PHONY: all clean fclean re run
+.PHONY: all clean fclean re

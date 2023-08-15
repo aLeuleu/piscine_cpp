@@ -3,15 +3,14 @@
 
 #include <string>
 
-using namespace std;
 
 class Weapon {
 private:
-	string type;
+	std::string type;
 public:
-	string& getType();
-	void 	setType(string type);
-	Weapon(string type);
+	std::string& getType();
+	void 	setType(std::string type);
+	Weapon(std::string type);
 };
 
 #endif //WEAPON_HPP

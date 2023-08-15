@@ -21,5 +21,17 @@ void Zombie::announce()
 
 Zombie::~Zombie()
 {
-	cout << this->name << " is dead" << endl;
+	cout << this->name << " is destroyed" << endl;
+}
+
+Zombie *newZombie(string name) // in this case, the zombie is allocated on the heap because it is returned
+{
+	Zombie *zombie = new Zombie(name);
+	return (zombie);
+}
+
+void randomChump(string name) // in this case, the zombie is allocated on the stack because it is not returned
+{
+	Zombie zombie = Zombie(name);
+	zombie.announce();
 }

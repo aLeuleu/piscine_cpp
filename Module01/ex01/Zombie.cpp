@@ -2,8 +2,6 @@
 #include <iostream>
 #include "Zombie.hpp"
 
-using namespace std;
-
 Zombie::Zombie()
 {
 	this->name = "default";
@@ -16,12 +14,12 @@ Zombie::Zombie(string &name)
 
 void Zombie::announce()
 {
-	cout << this->name << ": BraiiiiiiinnnzzzZ..." << endl;
+	std::cout << this->name << ": BraiiiiiiinnnzzzZ..." << endl;
 }
 
 Zombie::~Zombie()
 {
-	cout << this->name << " is dead" << endl;
+	std::cout << this->name << " is dead" << endl;
 }
 
 void Zombie::setName(string &name)

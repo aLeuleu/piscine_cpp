@@ -3,10 +3,13 @@
 
 void HumanB::attack()
 {
+	if (Weapon.getType() == "")
+		std::cout << name << " attack with their bare hands" << std::endl;
+	else
 	std::cout << name << " attack with their " << Weapon.getType() << std::endl;
 }
 
-HumanB::HumanB(string name) : Weapon("")
+HumanB::HumanB(std::string name) : Weapon("")
 {
 	this->name = name;
 }

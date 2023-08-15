@@ -6,7 +6,7 @@ void HumanA::attack()
 	std::cout << name << " attack with their " << Weapon.getType() << std::endl;
 }
 
-HumanA::HumanA(string name, class Weapon weapon) : Weapon(weapon)
+HumanA::HumanA(std::string name, class Weapon weapon) : Weapon(weapon)
 {
 	this->name = name;
 	this->Weapon = weapon;
