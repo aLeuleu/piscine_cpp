@@ -1,5 +1,6 @@
 #include "Contact.hpp"
 #include "phonebook.hpp"
+#define MAX_INT 2147483647
 
 int		main(){
 	PhoneBook	myPhoneBook;
@@ -19,7 +20,7 @@ int		main(){
 		if (cin.fail() || cin.eof()) // this will catch EOF and non-integer input
 		{
 			cin.clear();
-			cin.ignore(numeric_limits<streamsize>::max(), '\n'); //this will ignore the rest of the input
+			cin.ignore(MAX_INT, '\n');
 			std::cout << "Invalid input. Please try again.\n";
 			break;
 		}
