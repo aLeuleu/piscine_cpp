@@ -1,7 +1,7 @@
 #ifndef CPP_ZOMBIE_HPP
 	#define CPP_ZOMBIE_HPP
-	using namespace std;
 	#include <string>
+	using namespace std;
 
 	class Zombie {
 	private:
