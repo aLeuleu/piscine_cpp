@@ -1,10 +1,10 @@
 
 
 all:
-	@clang++ -Wall -Wextra -Werror -o megaphone megaphone.cpp -std=c++98
+	clang++ -Wall -Wextra -Werror -o megaphone megaphone.cpp -std=c++98
 
 clean:
-	@rm -rf megaphone
+	rm -rf megaphone
 
 fclean: clean
 
