@@ -1,12 +1,23 @@
 
+NAME=Megaphone
 
-all:
-	clang++ -Wall -Wextra -Werror -o megaphone megaphone.cpp -std=c++98
+SRC=megaphone.cpp
+
+OBJ=$(SRC:.cpp=.o)
+
+all: $(NAME)
+
+$(NAME): $(OBJ)
+	clang++ -Wall -Wextra -Werror -o $(NAME) $(OBJ) -std=c++98
+
+%.o: %.cpp
+	clang++ -Wall -Wextra -Werror -c $< -o $@ -std=c++98
 
 clean:
-	rm -rf megaphone
+	rm -rf $(NAME)
 
 fclean: clean
+	rm -rf $(OBJ)
 
 re: fclean all
 
