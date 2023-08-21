@@ -25,5 +25,13 @@ int main()
 }
 
 //In which case do you think it would be best to use a pointer to
-//Weapon? And a reference to Weapon? Why? Think about it before
-//starting this exercise.
+//Weapon? And a reference to Weapon? Why?
+//Answer:
+// It would be best to use a pointer to Weapon when you want to
+//change the Weapon object that the HumanA or HumanB object is using.
+
+//It would be best to use a reference to Weapon when you want to
+//change the Weapon object that the HumanA or HumanB object is using
+//and you don't want to have to worry about the Weapon object being
+//NULL.
+
