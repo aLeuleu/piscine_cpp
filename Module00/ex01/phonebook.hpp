@@ -13,7 +13,7 @@ enum commands {
 
 class PhoneBook {
 private:
-	Contact*	_contacts[8];
+	Contact     _contacts[8];
 	int			_nextContactIndex;
 
 public:

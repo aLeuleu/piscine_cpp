@@ -7,8 +7,6 @@ using namespace std;
 PhoneBook::PhoneBook() {
 	cout << "The PhoneBook is created" << endl;
 	this->_nextContactIndex = 0;
-	for (int i = 0; i < 8; i++)
-		this->_contacts[i] = NULL;
 }
 
 PhoneBook::~PhoneBook() {
@@ -17,26 +15,21 @@ PhoneBook::~PhoneBook() {
 
 void PhoneBook::addContact()
 {
-	string	firstname;
-	string	lastname;
-	string	nickname;
-	string	phoneNumber;
-	string	darkestSecret;
+	Contact *newContact = &(this->_contacts[this->_nextContactIndex]);
+
 
 	printGreen("Please enter the contact's firstname :");
-	cin >> firstname;
+	cin >> newContact->firstname;
 	printGreen("Please enter the contact's lastname :");
-	cin >> lastname;
+	cin >> newContact->lastname;
 	printGreen("Please enter the contact's nickname :");
-	cin >> nickname;
+	cin >> newContact->nickname;
 	printGreen("Please enter the contact's phoneNumber :");
-	cin >> phoneNumber;
+	cin >> newContact->phoneNumber;
 	printGreen("Please enter the contact's darkestSecret :");
-	cin >> darkestSecret;
+	cin >> newContact->darkestSecret;
 
-	Contact	*NewContact = new Contact(firstname, lastname, nickname, phoneNumber, darkestSecret);
-	cout << "Adding contact " << NewContact->firstname << endl;
-	this->_contacts[this->_nextContactIndex] = NewContact;
+	cout << "Adding contact " << newContact->firstname << endl;
 	this->_nextContactIndex++;
 	if (this->_nextContactIndex == 8)
 		this->_nextContactIndex = 0;
@@ -50,12 +43,12 @@ void PhoneBook::search()
 
 	for (int i = 0; i < 8; i++)
 	{
-		if ( this->_contacts[i] && !this->_contacts[i]->firstname.empty())
+		if ( !this->_contacts[i].firstname.empty())
 		{
 			std::cout << std::setfill(' ') << std::setiosflags(std::ios_base::right) << std::setw(10) << i << "|";
-			printRow(this->_contacts[i]->firstname);
-			printRow(this->_contacts[i]->lastname);
-			printRow(this->_contacts[i]->nickname);
+			printRow(this->_contacts[i].firstname);
+			printRow(this->_contacts[i].lastname);
+			printRow(this->_contacts[i].nickname);
 			cout << endl;
 		}
 	}
@@ -67,13 +60,15 @@ void PhoneBook::search()
 			cin.ignore(10000, '\n');
 			printGreen("Invalid index");
 		}
-		else if (this->_contacts[index])
+		else if (this->_contacts[index].firstname.empty())
+			printGreen("No contact at this index");
+		else
 		{
-			cout << "Firstname : " << _contacts[index]->firstname << endl;
-			cout << "Lastname : " << _contacts[index]->lastname << endl;
-			cout << "Nickname : " << _contacts[index]->nickname << endl;
-			cout << "PhoneNumber : " << _contacts[index]->phoneNumber << endl;
-			cout << "DarkestSecret : " << _contacts[index]->darkestSecret << endl;
+			cout << "Firstname : " << _contacts[index].firstname << endl;
+			cout << "Lastname : " << _contacts[index].lastname << endl;
+			cout << "Nickname : " << _contacts[index].nickname << endl;
+			cout << "PhoneNumber : " << _contacts[index].phoneNumber << endl;
+			cout << "DarkestSecret : " << _contacts[index].darkestSecret << endl;
 		}
 
 }
