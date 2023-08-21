@@ -16,11 +16,11 @@ int		main(){
 	{
 		PleaseEnterCmdMsg();
 		cin >> command;
-		if (cin.fail() || cin.eof()) // a explorer
+		if (cin.fail() || cin.eof()) // this will catch EOF and non-integer input
 		{
 			cin.clear();
-			cin.ignore(numeric_limits<streamsize>::max(), '\n');
-			printf("Invalid command \n");
+			cin.ignore(numeric_limits<streamsize>::max(), '\n'); //this will ignore the rest of the input
+			std::cout << "Invalid input. Please try again.\n";
 			break;
 		}
 		switch (command)
