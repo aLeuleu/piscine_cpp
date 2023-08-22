@@ -1,7 +1,7 @@
 
 NAME=ZombieHorde
 
-SRC=main.cpp zombie.cpp zombieHorde.cpp
+SRC=main.cpp Zombie.cpp zombieHorde.cpp
 
 OBJ=$(SRC:.cpp=.o)
 
