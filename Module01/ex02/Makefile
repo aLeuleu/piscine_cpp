@@ -1,7 +1,7 @@
 
 NAME=HI_THIS_IS_BRAIN
 
-SRC=main.cpp zombie.cpp zombieHorde.cpp
+SRC=main.cpp 
 
 all:
 	@clang++ -Wall -Wextra -Werror $(SRC) -o $(NAME) -std=c++98
