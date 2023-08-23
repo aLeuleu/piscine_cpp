@@ -23,7 +23,7 @@ int main(int argc, char **argv) {
 }
 
 void create_file(std::string data, std::string filename) {
-	std::ofstream output(filename);
+	std::ofstream output(filename.c_str());
 	if (!output.is_open()){
 		std::cout << "Fail to open file" << std::endl;
 		return ;
@@ -43,7 +43,7 @@ void replace_str(std::string &str, std::string s1, std::string s2) {
 
 std::string read_file(const std::string &filename) {
 
-	std::ifstream input(filename);
+	std::ifstream input(filename.c_str());
 	std::string line;
 	std::string data;
 
