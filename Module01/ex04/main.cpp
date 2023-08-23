@@ -1,5 +1,7 @@
 #include <iostream>
 #include <fstream>
+#include <cstdlib>
+#include <cstring>
 
 std::string read_file(const std::string &filename);
 void replace_str(std::string &str, std::string s1, std::string s2);
@@ -22,6 +24,10 @@ int main(int argc, char **argv) {
 
 void create_file(std::string data, std::string filename) {
 	std::ofstream output(filename);
+	if (!output.is_open()){
+		std::cout << "Fail to open file" << std::endl;
+		return ;
+	}
 	output << data;
 }
 
