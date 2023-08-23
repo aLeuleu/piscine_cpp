@@ -24,14 +24,15 @@ int main()
 	return 0;
 }
 
-//In which case do you think it would be best to use a pointer to
-//Weapon? And a reference to Weapon? Why?
-//Answer:
-// It would be best to use a pointer to Weapon when you want to
-//change the Weapon object that the HumanA or HumanB object is using.
+//Use Pointers When:
+//
+//  You need nullable or reassignable variables.
+//  You're working with dynamic memory allocation (new and delete).
+//  Polymorphism is involved, such as dealing with base and derived classes.
+//  You need to work with arrays.
 
-//It would be best to use a reference to Weapon when you want to
-//change the Weapon object that the HumanA or HumanB object is using
-//and you don't want to have to worry about the Weapon object being
-//NULL.
-
+//Use References When:
+//
+//You want a non-null, unchangeable reference to an object.
+//When passing objects to functions efficiently.
+//When overloading operators for custom types.

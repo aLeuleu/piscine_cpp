@@ -4,7 +4,7 @@
 using namespace std;
 
 
-int main(int argc, char **argv) {
+int main() {
 	Harl jean;
 
 	jean.complain("debug");
@@ -15,4 +15,5 @@ int main(int argc, char **argv) {
 	jean.complain("warning");
 	jean.complain("warning");
 	jean.complain("error");
+	return (0);
 }
