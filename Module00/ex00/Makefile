@@ -1,5 +1,5 @@
 
-NAME=Megaphone
+NAME=megaphone
 
 SRC=megaphone.cpp
 

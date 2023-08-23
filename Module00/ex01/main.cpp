@@ -15,13 +15,15 @@ int		main(){
 	command = 0;
 	while(command != EXIT)
 	{
-		PleaseEnterCmdMsg();
+		if (!std::cin.eof())
+			PleaseEnterCmdMsg();
 		cin >> command;
 		if (cin.fail() || cin.eof()) // this will catch EOF and non-integer input
 		{
 			cin.clear();
 			cin.ignore(MAX_INT, '\n');
-			std::cout << "Invalid input. Please try again.\n";
+			if (!std::cin.eof())
+				std::cout << "Invalid input. Please try again.\n";
 			break;
 		}
 		switch (command)

@@ -21,10 +21,10 @@ public:
 	~PhoneBook();
 	void addContact();
 	void search();
+		void myGetLine(string &var) const;
 };
 
 void printGreen(const string& txt);
-void printGrey(const string& txt);
 void PleaseEnterCmdMsg();
 void printRow(const string& txt);
 #endif //CPP_PHONEBOOK_HPP
