@@ -7,7 +7,7 @@ void create_file(std::string data, std::string filename);
 
 int main(int argc, char **argv) {
 	if (argc != 4) {
-		std::cout << "Usage : ./replace <filename> <s1> <s2> " << endl;
+		std::cout << "Usage : ./replace <filename> <s1> <s2> " << std::endl;
 		return (0);
 	}
 	std::string filename = argv[1];
@@ -42,7 +42,7 @@ std::string read_file(const std::string &filename) {
 	std::string data;
 
 	if (!input.is_open()){
-		std::cout << "Fail to open file" << endl;
+		std::cout << "Fail to open file" << std::endl;
 		return ("");
 	}
 
