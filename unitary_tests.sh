@@ -7,7 +7,8 @@ if [ $? -ne 0 ]; then
     echo "Compilation failed"
     exit 1
 fi
-if [ $(valgrind --leak-check=full --silent ./Zombie 1>/dev/null) -ne 0 ]; then
+valgrind --leak-check=full ./Zombie 1>/dev/null 2>/dev/null
+if [ $($?) -ne 0 ]; then
     echo "Leaks"
     exit 1
 fi
