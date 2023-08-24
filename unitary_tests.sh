@@ -3,6 +3,7 @@
 
 cd ./Module00/ex00
 make --silent
+echo $?
 if [ $? -ne 0 ]; then
     echo "Compilation failed"
     exit 1
