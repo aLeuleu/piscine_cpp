@@ -4,7 +4,7 @@
 cd ./Module01/ex00
 echo
 echo
-make --silent
+make
 if [ $? -ne 0 ]; then
     echo "Compilation failed"
     exit 1
