@@ -18,4 +18,7 @@ run: all
 	leaks --atExit -- ./$(NAME) | tail -n 2
 	make clean
 
+leaks: all
+	valgrind --leak-check=full --show-leak-kinds=all ./$(NAME)
+
 .PHONY: all clean fclean re run
