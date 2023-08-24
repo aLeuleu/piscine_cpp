@@ -7,9 +7,9 @@ for i in 00 01 02
 do
   echo
   echo $i
-#	cd ../ex$i
-#	echo "01_$i :"
-#	make leaks
+	cd ../ex$i
+	echo "01_$i :"
+	make leaks
 done
 
 
