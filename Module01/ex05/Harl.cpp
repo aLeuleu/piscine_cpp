@@ -2,22 +2,22 @@
 
 void Harl::debug(void) {
 
-	std::cout << "⚙️" << std::endl;
+	std::cout << "debug.." << std::endl;
 }
 
 void Harl::info(void) {
 
-	std::cout << "ℹ️" << std::endl;
+	std::cout << "info.." << std::endl;
 }
 
 void Harl::warning(void) {
 
-	std::cout << "⚠️" << std::endl;
+	std::cout << "warning.." << std::endl;
 }
 
 void Harl::error(void) {
 
-	std::cout << "❌" << std::endl;
+	std::cout << "error.." << std::endl;
 }
 
 void Harl::complain(std::string level) {
