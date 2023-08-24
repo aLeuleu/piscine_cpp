@@ -2,8 +2,7 @@
 
 
 cd ./Module01/ex01
-echo
-make
+make --silent
 if [ $? -ne 0 ]; then
     echo "Compilation failed"
     exit 1
