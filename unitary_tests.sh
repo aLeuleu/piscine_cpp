@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-cd /test_cpp/Module00/ex00
+cd ./Module00/ex00
 make --silent
 if [ $? -ne 0 ]; then
     echo "Compilation failed"
