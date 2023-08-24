@@ -1,13 +1,13 @@
 #!/bin/bash
 
 
-cd ./Module01/ex01
+cd ./Module01/ex00
 make --silent
 if [ $? -ne 0 ]; then
     echo "Compilation failed"
     exit 1
 fi
-if [ $(valgrind --leak-check=full ./Zombie 1>/dev/null) -ne 0 ]; then
+if [ $(1>/dev/null valgrind --leak-check=full ./Zombie) -ne 0 ]; then
     echo "Leaks"
     exit 1
 fi
