@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-cd ./Module00/ex00
+cd ./Module01/ex01
 echo
 make
 if [ $? -ne 0 ]; then
