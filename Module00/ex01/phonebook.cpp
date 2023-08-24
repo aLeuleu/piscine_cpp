@@ -4,38 +4,38 @@
 #include <iomanip>
 
 PhoneBook::PhoneBook() {
-	std::cout << "The PhoneBook is created" << endl;
+	std::cout << "The PhoneBook is created" << std::endl;
 	this->_nextContactIndex = 0;
 }
 
 PhoneBook::~PhoneBook() {
-	std::cout << "The PhoneBook is destroyed" << endl;
+	std::cout << "The PhoneBook is destroyed" << std::endl;
 }
 
 void PhoneBook::addContact()
 {
 	printGreen("Please enter the contact's firstname :");
-	myGetLine(this->_contacts->getFirstname());
+	myGetLine(this->_contacts[_nextContactIndex].getFirstname());
 	printGreen("Please enter the contact's lastname :");
-	myGetLine(this->_contacts->getLastname());
+	myGetLine(this->_contacts[_nextContactIndex].getLastname());
 	printGreen("Please enter the contact's nickname :");
-	myGetLine(this->_contacts->getNickname());
+	myGetLine(this->_contacts[_nextContactIndex].getNickname());
 	printGreen("Please enter the contact's phoneNumber :");
-	myGetLine(this->_contacts->getPhoneNumber());
+	myGetLine(this->_contacts[_nextContactIndex].getPhoneNumber());
 	printGreen("Please enter the contact's darkestSecret :");
-	myGetLine(this->_contacts->getDarkestSecret());
+	myGetLine(this->_contacts[_nextContactIndex].getDarkestSecret());
 	printGreen("Adding contact ...");
 	this->_nextContactIndex++;
 	if (this->_nextContactIndex == 8)
 		this->_nextContactIndex = 0;
 }
 
-void PhoneBook::myGetLine(string &var) const {
+void PhoneBook::myGetLine(std::string &var) const {
 	if (!std::cin.eof())
 	{
-		getline(cin, var);
+		getline(std::cin, var);
 		while(!std::cin.eof() && var.empty()){
-			getline(cin, var);
+			getline(std::cin, var);
 		}
 		if (std::cin.eof())
 			std::cout << std::endl << std::endl << "EOF detected ..." << std::endl << "Exiting ..." << std::endl;
@@ -56,7 +56,7 @@ void PhoneBook::search()
 			printRow(this->_contacts[i].getFirstname());
 			printRow(this->_contacts[i].getLastname());
 			printRow(this->_contacts[i].getNickname());
-			std::cout << endl;
+			std::cout << std::endl;
 		}
 	}
 		printGreen("Please enter the index of the contact you want to see : ");
@@ -71,18 +71,18 @@ void PhoneBook::search()
 			printGreen("No contact at this index");
 		else
 		{
-			std::cout << "Firstname : " << _contacts[index].getFirstname() << endl;
-			std::cout << "Lastname : " << _contacts[index].getLastname() << endl;
-			std::cout << "Nickname : " << _contacts[index].getNickname() << endl;
-			std::cout << "PhoneNumber : " << _contacts[index].getPhoneNumber() << endl;
-			std::cout << "DarkestSecret : " << _contacts[index].getDarkestSecret() << endl;
+			std::cout << "Firstname : " << _contacts[index].getFirstname() << std::endl;
+			std::cout << "Lastname : " << _contacts[index].getLastname() << std::endl;
+			std::cout << "Nickname : " << _contacts[index].getNickname() << std::endl;
+			std::cout << "PhoneNumber : " << _contacts[index].getPhoneNumber() << std::endl;
+			std::cout << "DarkestSecret : " << _contacts[index].getDarkestSecret() << std::endl;
 		}
 
 }
-void printRow(const string& txt)
+void printRow(const std::string& txt)
 {
-	string green = "\033[1;32m";
-	string reset = "\033[0m";
+	std::string green = "\033[1;32m";
+	std::string reset = "\033[0m";
 
 	if (txt.length() > 10)
 		std::cout << green << txt.substr(0, 9) << "." << reset << "|";
@@ -92,8 +92,8 @@ void printRow(const string& txt)
 
 void PleaseEnterCmdMsg()
 {
-	string green = "\033[1;32m";
-	string reset = "\033[0m";
+	std::string green = "\033[1;32m";
+	std::string reset = "\033[0m";
 
 	printGreen("Please enter a command :");
 	printGreen("1 - ADD");
@@ -101,10 +101,10 @@ void PleaseEnterCmdMsg()
 	printGreen("3 - EXIT");
 }
 
-void printGreen(const string& txt)
+void printGreen(const std::string& txt)
 {
-	string green = "\033[1;32m";
-	string reset = "\033[0m";
+	std::string green = "\033[1;32m";
+	std::string reset = "\033[0m";
 	if (!std::cin.eof())
-		std::cout << green << txt << reset << endl;
+		std::cout << green << txt << reset << std::endl;
 }

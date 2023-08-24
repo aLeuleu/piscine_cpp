@@ -3,8 +3,6 @@
 #include <string>
 #include "Contact.hpp"
 
-using namespace std;
-
 enum commands {
 	ADD = 1,
 	SEARCH = 2,
@@ -21,10 +19,10 @@ public:
 	~PhoneBook();
 	void addContact();
 	void search();
-		void myGetLine(string &var) const;
+		void myGetLine(std::string &var) const;
 };
 
-void printGreen(const string& txt);
+void printGreen(const std::string& txt);
 void PleaseEnterCmdMsg();
-void printRow(const string& txt);
+void printRow(const std::string& txt);
 #endif //CPP_PHONEBOOK_HPP

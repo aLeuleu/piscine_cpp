@@ -3,7 +3,6 @@ NAME=PhoneBook
 
 SRC=phonebook.cpp Contact.cpp main.cpp
 
-
 OBJ=$(SRC:.cpp=.o)
 
 all: $(NAME)

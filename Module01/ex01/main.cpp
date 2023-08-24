@@ -7,7 +7,7 @@ int 	main(void){
 	Zombie* horde = zombieHorde(N, "Brian");
 	for (int i = 0; i < N; i++)
 	{
-		std::cout << i << endl;
+		std::cout << i << std::endl;
 		horde[i].announce();
 	}
 	delete [] horde;

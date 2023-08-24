@@ -2,35 +2,34 @@
 #include <iostream>
 #include "Zombie.hpp"
 
-using namespace std;
 
 Zombie::Zombie()
 {
-	this->name = "default";
+	this->_name = "default";
 }
 
-Zombie::Zombie(string &name)
+Zombie::Zombie(std::string &name)
 {
-	this->name = name;
+	this->_name = name;
 }
 
 void Zombie::announce()
 {
-	cout << this->name << ": BraiiiiiiinnnzzzZ..." << endl;
+	std::cout << this->_name << ": BraiiiiiiinnnzzzZ..." << std::endl;
 }
 
 Zombie::~Zombie()
 {
-	cout << this->name << " is destroyed" << endl;
+	std::cout << this->_name << " is destroyed" << std::endl;
 }
 
-Zombie *newZombie(string name) // in this case, the zombie is allocated on the heap because it is returned
+Zombie *newZombie(std::string name) // in this case, the zombie is allocated on the heap because it is returned
 {
 	Zombie *zombie = new Zombie(name);
 	return (zombie);
 }
 
-void randomChump(string name) // in this case, the zombie is allocated on the stack because it is not returned
+void randomChump(std::string name) // in this case, the zombie is allocated on the stack because it is not returned
 {
 	Zombie zombie = Zombie(name);
 	zombie.announce();

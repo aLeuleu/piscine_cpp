@@ -5,7 +5,7 @@ set(CMAKE_CXX_STANDARD 14)
 
 add_executable(00_00 Module00/ex00/megaphone.cpp)
 add_executable(00_01 Module00/ex01/main.cpp Module00/ex01/PhoneBook.cpp Module00/ex01/PhoneBook.hpp Module00/ex01/Contact.cpp Module00/ex01/Contact.hpp)
-add_executable(01_00 "Module01/ex00/Zombie.cpp" "Module01/ex00/Zombie.hpp" "Module01/ex00/newZombie.cpp" "Module01/ex00/randomChump.cpp" "Module01/ex00/main.cpp" Module04/ex00/WrongCat.hpp Module05/ex02/Bureaucrat.cpp)
+add_executable(01_00 "Module01/ex00/Zombie.cpp" "Module01/ex00/Zombie.hpp" "Module01/ex00/main.cpp")
 add_executable(01_01 "Module01/ex01/Zombie.cpp" "Module01/ex01/zombieHorde.cpp" "Module01/ex01/main.cpp" Module00/ex01/Contact.cpp Module00/ex01/Contact.hpp)
 add_executable(01_02 "Module01/ex02/main.cpp")
 add_executable(01_03 "Module01/ex03/main.cpp" Module01/ex03/Weapon.cpp Module01/ex03/Weapon.hpp Module01/ex03/HumanA.hpp Module01/ex03/HumanA.cpp Module01/ex03/HumanB.cpp)
@@ -23,3 +23,4 @@ add_executable(04_02 Module04/ex02/main.cpp Module04/ex02/Dog.hpp Module04/ex02/
 add_executable(05_00 Module05/ex00/main.cpp Module05/ex00/Bureaucrat.hpp Module05/ex00/Bureaucrat.cpp)
 add_executable(05_01 Module05/ex01/Bureaucrat.cpp Module05/ex01/Form.cpp Module05/ex01/Form.hpp Module05/ex01/main.cpp)
 add_executable(05_02 Module05/ex02/main.cpp Module05/ex02/Bureaucrat.cpp Module05/ex02/AForm.cpp)
+add_executable(06_00 Module06/ex00/main.cpp Module06/ex00/ScalarConverter.h Module06/ex00/ScalarConverter.cpp)

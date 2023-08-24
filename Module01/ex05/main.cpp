@@ -1,8 +1,6 @@
 #include <iostream>
 #include "Harl.hpp"
 
-using namespace std;
-
 
 int main() {
 	Harl jean;

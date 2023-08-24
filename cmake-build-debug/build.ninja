@@ -126,29 +126,11 @@ build CMakeFiles/01_00.dir/Module01/ex00/Zombie.cpp.o: CXX_COMPILER__01_00_Debug
   OBJECT_DIR = CMakeFiles/01_00.dir
   OBJECT_FILE_DIR = CMakeFiles/01_00.dir/Module01/ex00
 
-build CMakeFiles/01_00.dir/Module01/ex00/newZombie.cpp.o: CXX_COMPILER__01_00_Debug /Users/aurelienlevra/CLionProjects/cpp/Module01/ex00/newZombie.cpp || cmake_object_order_depends_target_01_00
-  DEP_FILE = CMakeFiles/01_00.dir/Module01/ex00/newZombie.cpp.o.d
-  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -std=gnu++14
-  OBJECT_DIR = CMakeFiles/01_00.dir
-  OBJECT_FILE_DIR = CMakeFiles/01_00.dir/Module01/ex00
-
-build CMakeFiles/01_00.dir/Module01/ex00/randomChump.cpp.o: CXX_COMPILER__01_00_Debug /Users/aurelienlevra/CLionProjects/cpp/Module01/ex00/randomChump.cpp || cmake_object_order_depends_target_01_00
-  DEP_FILE = CMakeFiles/01_00.dir/Module01/ex00/randomChump.cpp.o.d
-  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -std=gnu++14
-  OBJECT_DIR = CMakeFiles/01_00.dir
-  OBJECT_FILE_DIR = CMakeFiles/01_00.dir/Module01/ex00
-
 build CMakeFiles/01_00.dir/Module01/ex00/main.cpp.o: CXX_COMPILER__01_00_Debug /Users/aurelienlevra/CLionProjects/cpp/Module01/ex00/main.cpp || cmake_object_order_depends_target_01_00
   DEP_FILE = CMakeFiles/01_00.dir/Module01/ex00/main.cpp.o.d
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -std=gnu++14
   OBJECT_DIR = CMakeFiles/01_00.dir
   OBJECT_FILE_DIR = CMakeFiles/01_00.dir/Module01/ex00
-
-build CMakeFiles/01_00.dir/Module05/ex02/Bureaucrat.cpp.o: CXX_COMPILER__01_00_Debug /Users/aurelienlevra/CLionProjects/cpp/Module05/ex02/Bureaucrat.cpp || cmake_object_order_depends_target_01_00
-  DEP_FILE = CMakeFiles/01_00.dir/Module05/ex02/Bureaucrat.cpp.o.d
-  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -std=gnu++14
-  OBJECT_DIR = CMakeFiles/01_00.dir
-  OBJECT_FILE_DIR = CMakeFiles/01_00.dir/Module05/ex02
 
 
 # =============================================================================
@@ -158,7 +140,7 @@ build CMakeFiles/01_00.dir/Module05/ex02/Bureaucrat.cpp.o: CXX_COMPILER__01_00_D
 #############################################
 # Link the executable 01_00
 
-build 01_00: CXX_EXECUTABLE_LINKER__01_00_Debug CMakeFiles/01_00.dir/Module01/ex00/Zombie.cpp.o CMakeFiles/01_00.dir/Module01/ex00/newZombie.cpp.o CMakeFiles/01_00.dir/Module01/ex00/randomChump.cpp.o CMakeFiles/01_00.dir/Module01/ex00/main.cpp.o CMakeFiles/01_00.dir/Module05/ex02/Bureaucrat.cpp.o
+build 01_00: CXX_EXECUTABLE_LINKER__01_00_Debug CMakeFiles/01_00.dir/Module01/ex00/Zombie.cpp.o CMakeFiles/01_00.dir/Module01/ex00/main.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk
   OBJECT_DIR = CMakeFiles/01_00.dir
   POST_BUILD = :
@@ -891,6 +873,43 @@ build 05_02: CXX_EXECUTABLE_LINKER__05_02_Debug CMakeFiles/05_02.dir/Module05/ex
   TARGET_FILE = 05_02
   TARGET_PDB = 05_02.dbg
 
+# =============================================================================
+# Object build statements for EXECUTABLE target 06_00
+
+
+#############################################
+# Order-only phony target for 06_00
+
+build cmake_object_order_depends_target_06_00: phony || CMakeFiles/06_00.dir
+
+build CMakeFiles/06_00.dir/Module06/ex00/main.cpp.o: CXX_COMPILER__06_00_Debug /Users/aurelienlevra/CLionProjects/cpp/Module06/ex00/main.cpp || cmake_object_order_depends_target_06_00
+  DEP_FILE = CMakeFiles/06_00.dir/Module06/ex00/main.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -std=gnu++14
+  OBJECT_DIR = CMakeFiles/06_00.dir
+  OBJECT_FILE_DIR = CMakeFiles/06_00.dir/Module06/ex00
+
+build CMakeFiles/06_00.dir/Module06/ex00/ScalarConverter.cpp.o: CXX_COMPILER__06_00_Debug /Users/aurelienlevra/CLionProjects/cpp/Module06/ex00/ScalarConverter.cpp || cmake_object_order_depends_target_06_00
+  DEP_FILE = CMakeFiles/06_00.dir/Module06/ex00/ScalarConverter.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -std=gnu++14
+  OBJECT_DIR = CMakeFiles/06_00.dir
+  OBJECT_FILE_DIR = CMakeFiles/06_00.dir/Module06/ex00
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target 06_00
+
+
+#############################################
+# Link the executable 06_00
+
+build 06_00: CXX_EXECUTABLE_LINKER__06_00_Debug CMakeFiles/06_00.dir/Module06/ex00/main.cpp.o CMakeFiles/06_00.dir/Module06/ex00/ScalarConverter.cpp.o
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk
+  OBJECT_DIR = CMakeFiles/06_00.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = 06_00
+  TARGET_PDB = 06_00.dbg
+
 
 #############################################
 # Utility command for edit_cache
@@ -925,7 +944,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 #############################################
 # Folder: /Users/aurelienlevra/CLionProjects/cpp/cmake-build-debug
 
-build all: phony 00_00 00_01 01_00 01_01 01_02 01_03 01_04 01_05 02_00 02_01 02_02 03_00 03_01 03_02 04_00 04_01 04_02 05_00 05_01 05_02
+build all: phony 00_00 00_01 01_00 01_01 01_02 01_03 01_04 01_05 02_00 02_01 02_02 03_00 03_01 03_02 04_00 04_01 04_02 05_00 05_01 05_02 06_00
 
 # =============================================================================
 # Built-in targets

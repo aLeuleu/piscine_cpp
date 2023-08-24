@@ -3,14 +3,16 @@
 #include <iostream>
 #include <string>
 
-std::string &Weapon::getType()
+const std::string &Weapon::getType()
 {
-	std::string &typeREF = this->type;
+	const std::string &typeREF = this->_type;
 	return typeREF;
 }
+
 Weapon::Weapon(std::string type) {
-	this->type = type;
+	this->_type = type;
 }
-void Weapon::setType(std::string newtype) {
-	this->type = newtype;
+
+void Weapon::setType(std::string newType) {
+	this->_type = newType;
 }

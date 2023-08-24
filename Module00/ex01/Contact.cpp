@@ -4,14 +4,14 @@ Contact::Contact(){};
 
 Contact::~Contact(){};
 
-Contact::Contact(string firstname, string lastname, string nickname, string darkestSecret, string phoneNumber)
+Contact::Contact(std::string firstname, std::string lastname, std::string nickname, std::string darkestSecret, std::string phoneNumber)
 {
 	this->_firstname = firstname;
 	this->_lastname = lastname;
 	this->_nickname = nickname;
 	this->_darkestSecret = darkestSecret;
 	this->_phoneNumber = phoneNumber;
-	cout << "Contact \"" << this->_firstname << "\" created" << endl;
+	std::cout << "Contact \"" << this->_firstname << "\" created" << std::endl;
 }
 
 bool Contact::operator==(const Contact &rhs) const
@@ -42,20 +42,23 @@ std::string &Contact::getDarkestSecret() {
 	return _darkestSecret;
 }
 
-void Contact::setFirstname(string firstname) {
+void Contact::setFirstname(std::string firstname) {
 	this->_firstname = firstname;
 }
 
-void Contact::setLastname(string lastname) {
+void Contact::setLastname(std::string lastname) {
 	this->_lastname = lastname;
 }
 
-void Contact::setNickname(string nickname) {
+void Contact::setNickname(std::string nickname) {
 	this->_nickname = nickname;
 }
 
-void Contact::setPhoneNumber(string phoneNumber) {
+void Contact::setPhoneNumber(std::string phoneNumber) {
 	this->_phoneNumber = phoneNumber;
+}
+void Contact::setDarkestSecret(std::string darkestSecret) {
+	this->_darkestSecret = darkestSecret;
 }
 
 

@@ -2,32 +2,30 @@
 #define CPP_CONTACT_HPP
 #include <iostream>
 
-using namespace std;
-
 class Contact {
 public:
 	Contact();
-	Contact(string firstname, string lastname, string nickname, string darkestSecret, string phoneNumber);
+	Contact(std::string firstname, std::string lastname, std::string nickname, std::string darkestSecret, std::string phoneNumber);
 	bool operator==(const Contact &rhs) const;
 	std::string& getFirstname();
 	std::string& getLastname();
 	std::string& getNickname();
 	std::string& getPhoneNumber();
 	std::string& getDarkestSecret();
-	void setFirstname(string firstname);
-	void setLastname(string lastname);
-	void setNickname(string nickname);
-	void setPhoneNumber(string phoneNumber);
-	void setDarkestSecret(string darkestSecret);
+	void setFirstname(std::string firstname);
+	void setLastname(std::string lastname);
+	void setNickname(std::string nickname);
+	void setPhoneNumber(std::string phoneNumber);
+	void setDarkestSecret(std::string darkestSecret);
 
 
 	~Contact();
 	private :
-	string _firstname;
-	string _lastname;
-	string _nickname;
-	string _phoneNumber;
-	string _darkestSecret;
+	std::string _firstname;
+	std::string _lastname;
+	std::string _nickname;
+	std::string _phoneNumber;
+	std::string _darkestSecret;
 
 };
 #endif
