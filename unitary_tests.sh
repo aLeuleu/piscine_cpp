@@ -2,8 +2,8 @@
 
 
 cd ./Module00/ex00
-make --silent
-echo $?
+echo
+make
 if [ $? -ne 0 ]; then
     echo "Compilation failed"
     exit 1
@@ -24,4 +24,4 @@ if [ $(valgrind --leak-check=full ./ZombieHorde) -ne 0 ]; then
     echo "Leaks"
     exit 1
 fi
-echo "01_01"
+echo "01_01 OK"
