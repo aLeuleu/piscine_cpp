@@ -3,7 +3,7 @@
 
 cd ./Module01/ex00
 
-for i in {00..02}
+for i in 00 01 02
 do
   echo
   echo $i
