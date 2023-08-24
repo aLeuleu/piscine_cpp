@@ -346,6 +346,43 @@ build 01_05: CXX_EXECUTABLE_LINKER__01_05_Debug CMakeFiles/01_05.dir/Module01/ex
   TARGET_PDB = 01_05.dbg
 
 # =============================================================================
+# Object build statements for EXECUTABLE target 01_06
+
+
+#############################################
+# Order-only phony target for 01_06
+
+build cmake_object_order_depends_target_01_06: phony || CMakeFiles/01_06.dir
+
+build CMakeFiles/01_06.dir/Module01/ex06/Harl.cpp.o: CXX_COMPILER__01_06_Debug /Users/aurelienlevra/CLionProjects/cpp/Module01/ex06/Harl.cpp || cmake_object_order_depends_target_01_06
+  DEP_FILE = CMakeFiles/01_06.dir/Module01/ex06/Harl.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -std=gnu++14
+  OBJECT_DIR = CMakeFiles/01_06.dir
+  OBJECT_FILE_DIR = CMakeFiles/01_06.dir/Module01/ex06
+
+build CMakeFiles/01_06.dir/Module01/ex06/main.cpp.o: CXX_COMPILER__01_06_Debug /Users/aurelienlevra/CLionProjects/cpp/Module01/ex06/main.cpp || cmake_object_order_depends_target_01_06
+  DEP_FILE = CMakeFiles/01_06.dir/Module01/ex06/main.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -std=gnu++14
+  OBJECT_DIR = CMakeFiles/01_06.dir
+  OBJECT_FILE_DIR = CMakeFiles/01_06.dir/Module01/ex06
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target 01_06
+
+
+#############################################
+# Link the executable 01_06
+
+build 01_06: CXX_EXECUTABLE_LINKER__01_06_Debug CMakeFiles/01_06.dir/Module01/ex06/Harl.cpp.o CMakeFiles/01_06.dir/Module01/ex06/main.cpp.o
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk
+  OBJECT_DIR = CMakeFiles/01_06.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = 01_06
+  TARGET_PDB = 01_06.dbg
+
+# =============================================================================
 # Object build statements for EXECUTABLE target 02_00
 
 
@@ -944,7 +981,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 #############################################
 # Folder: /Users/aurelienlevra/CLionProjects/cpp/cmake-build-debug
 
-build all: phony 00_00 00_01 01_00 01_01 01_02 01_03 01_04 01_05 02_00 02_01 02_02 03_00 03_01 03_02 04_00 04_01 04_02 05_00 05_01 05_02 06_00
+build all: phony 00_00 00_01 01_00 01_01 01_02 01_03 01_04 01_05 01_06 02_00 02_01 02_02 03_00 03_01 03_02 04_00 04_01 04_02 05_00 05_01 05_02 06_00
 
 # =============================================================================
 # Built-in targets

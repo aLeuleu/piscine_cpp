@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "03_00"
+			"path" : "02_00"
 		}
 	],
 	"backtrace" : 1,
@@ -24,7 +24,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 17,
+				"line" : 15,
 				"parent" : 0
 			}
 		]
@@ -57,7 +57,7 @@
 			]
 		}
 	],
-	"id" : "03_00::@6890427a1f51a3e7e1df",
+	"id" : "02_00::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -73,8 +73,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "03_00",
-	"nameOnDisk" : "03_00",
+	"name" : "02_00",
+	"nameOnDisk" : "02_00",
 	"paths" : 
 	{
 		"build" : ".",
@@ -103,18 +103,18 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "Module03/ex00/main.cpp",
+			"path" : "Module02/ex00/main.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "Module03/ex00/ClapTrap.cpp",
+			"path" : "Module02/ex00/Fixed.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "Module03/ex00/ClapTrap.hpp",
+			"path" : "Module02/ex00/Fixed.hpp",
 			"sourceGroupIndex" : 1
 		}
 	],
