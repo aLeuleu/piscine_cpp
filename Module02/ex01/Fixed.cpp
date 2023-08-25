@@ -3,18 +3,18 @@
 #include <cmath>
 #include "Fixed.hpp"
 
-Fixed::FixedA() {
+Fixed::Fixed() {
 
 	std::cout << "Default constructor called" << std::endl;
 	this->_value = 0;
 }
 
-Fixed::~FixedA() {
+Fixed::~Fixed() {
 
 	std::cout << "Destructor called" << std::endl;
 }
 
-Fixed::FixedA(const Fixed &another) {
+Fixed::Fixed(const Fixed &another) {
 
 	std::cout << "Copy constructor called" << std::endl;
 	*this = another;
@@ -22,8 +22,8 @@ Fixed::FixedA(const Fixed &another) {
 
 Fixed &Fixed::operator=(const Fixed &another) {
 
-	std::cout << "Assignation operator called" << std::endl;
-	this->_value = another._value;
+	std::cout << "Copy assignment operator called" << std::endl;
+	this->setRawBits(another.getRawBits());
 	return *this;
 }
 
@@ -34,16 +34,14 @@ int Fixed::getRawBits(void) const {
 }
 
 void Fixed::setRawBits(const int raw) {
-
-	std::cout << "setRawBits member function called" << std::endl;
 	this->_value = raw;
 }
 
-Fixed::FixedA(const int value) {
+Fixed::Fixed(const int value) {
 	this->_value = value << this->_bits;
 }
 
-Fixed::FixedA(const float value) {
+Fixed::Fixed(const float value) {
 	this->_value = roundf(value * (1 << this->_bits)); //easier to explain in base 10 !
 }
 

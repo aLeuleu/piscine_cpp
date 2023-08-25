@@ -2,7 +2,7 @@
 
 class HumanB {
 public:
-	Weapon		Weapon;
+	Weapon		*Weapon;
 	std::string		name;
 	void		attack();
 	HumanB(std::string name);

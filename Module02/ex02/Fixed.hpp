@@ -1,3 +1,4 @@
+#pragma once
 class Fixed
 {
 private:
@@ -11,8 +12,8 @@ public:
 	int		getRawBits(void) const;
 	void	setRawBits(int const raw);
 
-	Fixed(int const value);
-	Fixed(float const value);
+	explicit Fixed(int const value);
+	explicit Fixed(float const value);
 	float	toFloat(void) const;
 	int		toInt(void) const;
 
@@ -28,9 +29,9 @@ public:
 	Fixed	operator/(const Fixed& anotherFixed) const;
 
 	Fixed&	operator++();      //prefix that is to say ++a
-	Fixed	operator++(int); //postfix
+	const Fixed	operator++(int); //postfix
 	Fixed&	operator--();
-	Fixed	operator--(int);
+	const Fixed	operator--(int);
 
 	static Fixed&		min(Fixed& a, Fixed& b);
 	static Fixed&		max(Fixed& a, Fixed& b);

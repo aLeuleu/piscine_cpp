@@ -72,6 +72,11 @@ void		ClapTrap::beRepaired(unsigned int amount) {
 		_hitPoints = std::numeric_limits<decltype(this->_hitPoints)>::max();
 	else
 		_hitPoints += amount;
-
 	_energyPoints --;
 }
+ClapTrap::ClapTrap(unsigned int hp, unsigned int ep, unsigned int ad) {
+	_hitPoints = hp;
+	_energyPoints = ep;
+	_attackDamage = ad;
+}
+

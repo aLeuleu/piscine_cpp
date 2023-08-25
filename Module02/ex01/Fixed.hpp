@@ -1,20 +1,21 @@
-class FixedA
+#pragma once
+class Fixed
 {
 private:
 	int					_value;
 	static const int	_bits = 8;
 public:
-	FixedA();
-	~FixedA();
-	FixedA(const Fixed& fixed);
+	Fixed();
+	~Fixed();
+	Fixed(const Fixed& fixed);
 	Fixed& operator=(const Fixed& fixed);
 	int		getRawBits(void) const;
 	void	setRawBits(int const raw);
 
-	FixedA(int const value);
-	FixedA(float const value);
-	float	toFloat(void) const;
-	int		toInt(void) const;
+	explicit    Fixed(int const value);
+	explicit    Fixed(float const value);
+	float       toFloat(void) const;
+	int		    toInt(void) const;
 
 };
 

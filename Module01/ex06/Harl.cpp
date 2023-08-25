@@ -36,9 +36,9 @@ void Harl::filter(std::string logToFilter)
 
 void Harl::trigFilter(int lvl){
 	_debugFilter =false;
-	_errorFilter = false;
 	_infoFilter = false;
 	_warningFilter = false;
+	_errorFilter = false;
 	switch (lvl) {
 		case 0:
 			_debugFilter =true;

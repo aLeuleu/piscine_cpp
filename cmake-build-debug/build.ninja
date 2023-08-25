@@ -617,6 +617,55 @@ build 03_02: CXX_EXECUTABLE_LINKER__03_02_Debug CMakeFiles/03_02.dir/Module03/ex
   TARGET_PDB = 03_02.dbg
 
 # =============================================================================
+# Object build statements for EXECUTABLE target 03_03
+
+
+#############################################
+# Order-only phony target for 03_03
+
+build cmake_object_order_depends_target_03_03: phony || CMakeFiles/03_03.dir
+
+build CMakeFiles/03_03.dir/Module03/ex03/ClapTrap.cpp.o: CXX_COMPILER__03_03_Debug /Users/aurelienlevra/CLionProjects/cpp/Module03/ex03/ClapTrap.cpp || cmake_object_order_depends_target_03_03
+  DEP_FILE = CMakeFiles/03_03.dir/Module03/ex03/ClapTrap.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -std=gnu++14
+  OBJECT_DIR = CMakeFiles/03_03.dir
+  OBJECT_FILE_DIR = CMakeFiles/03_03.dir/Module03/ex03
+
+build CMakeFiles/03_03.dir/Module03/ex03/FragTrap.cpp.o: CXX_COMPILER__03_03_Debug /Users/aurelienlevra/CLionProjects/cpp/Module03/ex03/FragTrap.cpp || cmake_object_order_depends_target_03_03
+  DEP_FILE = CMakeFiles/03_03.dir/Module03/ex03/FragTrap.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -std=gnu++14
+  OBJECT_DIR = CMakeFiles/03_03.dir
+  OBJECT_FILE_DIR = CMakeFiles/03_03.dir/Module03/ex03
+
+build CMakeFiles/03_03.dir/Module03/ex03/main.cpp.o: CXX_COMPILER__03_03_Debug /Users/aurelienlevra/CLionProjects/cpp/Module03/ex03/main.cpp || cmake_object_order_depends_target_03_03
+  DEP_FILE = CMakeFiles/03_03.dir/Module03/ex03/main.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -std=gnu++14
+  OBJECT_DIR = CMakeFiles/03_03.dir
+  OBJECT_FILE_DIR = CMakeFiles/03_03.dir/Module03/ex03
+
+build CMakeFiles/03_03.dir/Module03/ex03/DiamondTrap.cpp.o: CXX_COMPILER__03_03_Debug /Users/aurelienlevra/CLionProjects/cpp/Module03/ex03/DiamondTrap.cpp || cmake_object_order_depends_target_03_03
+  DEP_FILE = CMakeFiles/03_03.dir/Module03/ex03/DiamondTrap.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -std=gnu++14
+  OBJECT_DIR = CMakeFiles/03_03.dir
+  OBJECT_FILE_DIR = CMakeFiles/03_03.dir/Module03/ex03
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target 03_03
+
+
+#############################################
+# Link the executable 03_03
+
+build 03_03: CXX_EXECUTABLE_LINKER__03_03_Debug CMakeFiles/03_03.dir/Module03/ex03/ClapTrap.cpp.o CMakeFiles/03_03.dir/Module03/ex03/FragTrap.cpp.o CMakeFiles/03_03.dir/Module03/ex03/main.cpp.o CMakeFiles/03_03.dir/Module03/ex03/DiamondTrap.cpp.o
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk
+  OBJECT_DIR = CMakeFiles/03_03.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = 03_03
+  TARGET_PDB = 03_03.dbg
+
+# =============================================================================
 # Object build statements for EXECUTABLE target 04_00
 
 
@@ -981,7 +1030,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 #############################################
 # Folder: /Users/aurelienlevra/CLionProjects/cpp/cmake-build-debug
 
-build all: phony 00_00 00_01 01_00 01_01 01_02 01_03 01_04 01_05 01_06 02_00 02_01 02_02 03_00 03_01 03_02 04_00 04_01 04_02 05_00 05_01 05_02 06_00
+build all: phony 00_00 00_01 01_00 01_01 01_02 01_03 01_04 01_05 01_06 02_00 02_01 02_02 03_00 03_01 03_02 03_03 04_00 04_01 04_02 05_00 05_01 05_02 06_00
 
 # =============================================================================
 # Built-in targets
