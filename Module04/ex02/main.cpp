@@ -25,11 +25,5 @@ int main()
 	for (int i = 0; i < 10; i++)
 		delete animals[i];
 
-
-
-
-
-//N’oubliez pas de vérifier que vous n’avez pas de fuites de mémoire.
-
 	return 0;
 }

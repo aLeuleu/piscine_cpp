@@ -22,14 +22,24 @@ int main()
 	((Cat*)animals[3])->getBrain()->setIdea(0, "Kill all humans");
 	((Dog*)animals[4])->getBrain()->setIdea(0, "Eat flowers");
 
-	for (int i = 0; i < 10; i++)
+	//copys shouldnt be shallow
+	std::cout << std::endl;
+	std::cout << "(Cat *)animals[1] idea : " << 	((Cat*)animals[1])->getBrain()->getIdea(0)  << std::endl; ;
+	std::cout << std::endl;
+	Cat *copy_cat = new Cat();
+	copy_cat = (Cat *)animals[1];
+	std::cout << std::endl;
+	std::cout << "copy_cat = (Cat *)animals[1];" << std::endl;
+	std::cout << "copy_cat idea :"  <<copy_cat->getBrain()->getIdea(0) << std::endl;
+	std::cout << std::endl;
+
+	for (int i = 0; i < 10; i++){
 		delete animals[i];
+		std::cout << std::endl;
+	}
 
 
 
-
-
-//N’oubliez pas de vérifier que vous n’avez pas de fuites de mémoire.
 
 	return 0;
 }
