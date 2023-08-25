@@ -1,7 +1,11 @@
 
-NAME=harl
+NAME=04_01
 
-SRC= main.cpp Harl.cpp
+SRC=Animal.cpp \
+	Brain.cpp	\
+	Cat.cpp		\
+	Dog.cpp		\
+	main.cpp
 
 OBJ=$(SRC:.cpp=.o)
 

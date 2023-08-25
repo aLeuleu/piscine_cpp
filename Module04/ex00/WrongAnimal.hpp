@@ -10,7 +10,7 @@ public :
 	WrongAnimal();
 	virtual ~WrongAnimal();
 	WrongAnimal(const WrongAnimal &right);
-	WrongAnimal& 		operator=(const WrongAnimal& animal);
-	void	makeSound() const;
+	WrongAnimal& 	operator=(const WrongAnimal& animal);
+	void	        makeSound() const; //not virtual ! .... so the compiler won't search for anything deeper
 	std::string		getType() const;
 };

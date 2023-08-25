@@ -9,9 +9,9 @@ public :
 	Cat();
 	~Cat();
 	Cat(const Cat& right);
-	Cat& operator=(const Cat& cat);
-	void	makeSound() const;
-	Brain *getBrain() const;
+	Cat&    operator=(const Cat& cat);
+	void    makeSound() const;
+	Brain   *getBrain() const;
 private:
-	Brain *_brain;
+	Brain   *_brain;
 };

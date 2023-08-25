@@ -5,10 +5,10 @@
 
 class DiamondTrap : public FragTrap, public ScavTrap {
 	private :
-		std::string _name;
+		std::string     _name;
 		DiamondTrap(void);
 	public:
-		DiamondTrap(std::string name);
+		explicit DiamondTrap(std::string name);
 		DiamondTrap(const DiamondTrap &other);
 		virtual ~DiamondTrap(void);
 
