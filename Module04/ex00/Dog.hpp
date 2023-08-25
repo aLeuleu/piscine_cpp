@@ -1,4 +1,5 @@
-#pragma once
+#ifndef DOH_HPP
+#define DOH_HPP
 #include "Animal.hpp"
 #include <iostream>
 
@@ -11,3 +12,4 @@ public :
 	Dog& operator=(const Dog& dog);
 	void	makeSound() const;
 };
+#endif

@@ -1,4 +1,5 @@
-#pragma once
+#ifndef WRONG_ANIMAL_HPP
+#define WRONG_ANIMAL_HPP
 #include <string>
 #include <iostream>
 
@@ -14,3 +15,4 @@ public :
 	void	        makeSound() const; //not virtual ! .... so the compiler won't search for anything deeper
 	std::string		getType() const;
 };
+#endif

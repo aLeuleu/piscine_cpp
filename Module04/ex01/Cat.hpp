@@ -1,4 +1,5 @@
-#pragma once
+#ifndef CAT_HPP
+#define CAT_HPP
 #include "Animal.hpp"
 #include "Brain.hpp"
 #include <iostream>
@@ -15,3 +16,4 @@ public :
 private:
 	Brain   *_brain;
 };
+#endif

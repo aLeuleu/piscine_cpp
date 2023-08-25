@@ -1,4 +1,5 @@
-#pragma once
+#ifndef ANIMAL_HPP
+#define ANIMAL_HPP
 #include <string>
 #include <iostream>
 
@@ -14,3 +15,4 @@ public :
 	virtual void	makeSound() const;
 	std::string		getType() const;
 };
+#endif
