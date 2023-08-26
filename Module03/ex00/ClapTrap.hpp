@@ -1,6 +1,9 @@
 #pragma once
 #include <string>
 
+# ifndef UNINT_MAX
+#  define UNINT_MAX 4294967295
+# endif
 class ClapTrap
 {
 private :
