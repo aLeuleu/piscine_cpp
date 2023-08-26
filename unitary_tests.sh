@@ -13,7 +13,7 @@
 #	make leaks
 #done
 
-cd ./Module03/01
+cd ./Module03/ex01
 
 clear
 make
