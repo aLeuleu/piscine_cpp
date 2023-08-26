@@ -1,9 +1,7 @@
 #pragma once
 #include <string>
 
-# ifndef UNINT_MAX
-#  define UNINT_MAX 4294967295
-# endif
+
 class ClapTrap
 {
 protected :
@@ -22,4 +20,12 @@ public :
 	virtual void    attack(const std::string& target);
 	void            takeDamage(unsigned int amount);
 	void            beRepaired(unsigned int amount);
+	std::string		getName() const;
+	unsigned int	getHitPoints() const;
+	unsigned int	getEnergyPoints() const;
+	unsigned int	getAttackDamage() const;
+	void			setName(std::string name);
+	void			setHitPoints(unsigned int hitPoints);
+	void			setEnergyPoints(unsigned int energyPoints);
+	void			setAttackDamage(unsigned int attackDamage);
 };

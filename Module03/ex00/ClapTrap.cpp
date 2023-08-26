@@ -58,20 +58,45 @@ void		ClapTrap::takeDamage(unsigned int amount)
 }
 
 void		ClapTrap::beRepaired(unsigned int amount) {
-	std::cout << "ClapTrap gained " << amount << " HP." << std::endl;
+	std::cout << "ClapTrap "<<  _name << " gained " << amount << " HP." << std::endl;
 
 	if (this->_energyPoints == 0
 		|| this->_hitPoints == 0)
 	{
-		std::cout << this->_name << "does not have enough HP or energy points to be repaired ! .." << std::endl;
+		std::cout << this->_name << " does not have enough HP or energy points to be repaired ! .." << std::endl;
 		return;
 	}
 
 	//check overflow
 	if (_hitPoints + amount < _hitPoints)
-		_hitPoints = UINT_MAX;
+		_hitPoints = 4294967295;
 	else
 		_hitPoints += amount;
 
 	_energyPoints --;
 }
+std::string ClapTrap::getName() const {
+	return _name;
+}
+unsigned int ClapTrap::getHitPoints() const {
+	return _hitPoints;
+}
+unsigned int ClapTrap::getEnergyPoints() const {
+	return _energyPoints;
+}
+unsigned int ClapTrap::getAttackDamage() const {
+	return _attackDamage;
+}
+void ClapTrap::setName(std::string name) {
+	_name = name;
+}
+void ClapTrap::setHitPoints(unsigned int hitPoints) {
+	_hitPoints = hitPoints;
+}
+void ClapTrap::setEnergyPoints(unsigned int energyPoints) {
+	_energyPoints = energyPoints;
+}
+void ClapTrap::setAttackDamage(unsigned int attackDamage) {
+	_attackDamage = attackDamage;
+}
+
