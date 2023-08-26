@@ -69,7 +69,7 @@ void		ClapTrap::beRepaired(unsigned int amount) {
 
 	//check overflow
 	if (_hitPoints + amount < _hitPoints)
-		_hitPoints = std::numeric_limits<decltype(this->_hitPoints)>::max();
+		_hitPoints = UINT_MAX;
 	else
 		_hitPoints += amount;
 	_energyPoints --;
