@@ -1,7 +1,7 @@
 
 NAME=03_01
 
-SRC=ClapTrap.cpp main.cpp
+SRC=ClapTrap.cpp main.cpp ScavTrap.cpp
 
 OBJ=$(SRC:.cpp=.o)
 
