@@ -17,9 +17,9 @@ int    main(void)
 	std::cout << "4)" << std::endl;
 	// Can't attack because he is dead
 	trap.attack("Clap");
-	clap.beRepaired(std::numeric_limits<unsigned int>::max());
+	clap.beRepaired(4294967295);
 	clap.takeDamage(100);
-	clap.takeDamage(std::numeric_limits<unsigned int>::max());
+	clap.takeDamage(4294967295);
 	clap = ClapTrap("Clap");
 	for (int i = 0; i < 100; i++)
 		clap.attack("Bidule");
