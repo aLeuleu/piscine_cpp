@@ -34,10 +34,6 @@ FragTrap &FragTrap::operator=(const FragTrap &right) {
 	return *this;
 }
 
-void FragTrap::attack(const std::string &target) {
-
-	ClapTrap::attack(target);
-}
 void FragTrap::highFivesGuys(void) {
 	std::cout << "HIIGHH FIIIIIVES !!!" << std::endl;
 }

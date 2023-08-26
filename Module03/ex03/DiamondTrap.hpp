@@ -11,7 +11,6 @@ class DiamondTrap : public FragTrap, public ScavTrap {
 		explicit DiamondTrap(std::string name);
 		DiamondTrap(const DiamondTrap &other);
 		virtual ~DiamondTrap(void);
-
 		DiamondTrap &operator=(const DiamondTrap &other);
 };
 

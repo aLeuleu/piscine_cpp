@@ -75,6 +75,7 @@ void		ClapTrap::beRepaired(unsigned int amount) {
 	_energyPoints --;
 }
 ClapTrap::ClapTrap(unsigned int hp, unsigned int ep, unsigned int ad) {
+	std::cout << "ClapTrap Constructor called" << std::endl;
 	_hitPoints = hp;
 	_energyPoints = ep;
 	_attackDamage = ad;

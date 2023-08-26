@@ -9,5 +9,8 @@ int    main(void)
 	FragTrap CopyA("CopyA");
 	CopyA = A;
 	CopyA.attack("B");
+
+	std::cout << "2)" << std::endl;
+	A.highFivesGuys();
 	return (0);
 }

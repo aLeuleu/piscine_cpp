@@ -21,7 +21,7 @@ int    main(void)
 	clap.takeDamage(100);
 	clap.takeDamage(4294967295);
 	clap = ClapTrap("Clap");
-	for (int i = 0; i < 100; i++)
+	for (int i = 0; i < 5; i++)
 		clap.attack("Bidule");
 	trap = ClapTrap(clap);
 	trap.takeDamage(100);

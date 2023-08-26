@@ -5,12 +5,14 @@ SRC=ClapTrap.cpp main.cpp
 
 OBJ=$(SRC:.cpp=.o)
 
+HEADERS=$(SRC:.cpp=.hpp)
+
 all: $(NAME)
 
 $(NAME): $(OBJ)
 	clang++ -Wall -Wextra -Werror -o $(NAME) $(OBJ) -std=c++98
 
-%.o: %.cpp
+%.o: %.cpp %.hpp
 	clang++ -Wall -Wextra -Werror -c $< -o $@ -std=c++98
 
 clean:

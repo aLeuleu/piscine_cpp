@@ -33,10 +33,6 @@ ScavTrap &ScavTrap::operator=(const ScavTrap &right) {
 	return *this;
 }
 
-void ScavTrap::attack(const std::string &target) {
-	ClapTrap::attack(target);
-}
-
 void ScavTrap::guardGate() {
 	std::cout << "ScavTrap " << _name << " have enterred in Gate keeper mode" << std::endl;
 }

@@ -18,7 +18,7 @@ add_executable(02_02 Module02/ex02/main.cpp Module02/ex02/Fixed.cpp Module02/ex0
 add_executable(03_00 Module03/ex00/main.cpp Module03/ex00/main.cpp Module03/ex00/ClapTrap.cpp Module03/ex00/ClapTrap.hpp)
 add_executable(03_01 Module03/ex01/main.cpp Module03/ex01/ClapTrap.cpp Module03/ex01/ClapTrap.hpp Module03/ex01/ScavTrap.hpp Module03/ex01/ScavTrap.cpp)
 add_executable(03_02 Module03/ex02/main.cpp Module03/ex02/ClapTrap.cpp Module03/ex02/ClapTrap.hpp Module03/ex02/FragTrap.hpp Module03/ex02/FragTrap.cpp)
-add_executable(03_03 Module03/ex03/ClapTrap.cpp Module03/ex03/FragTrap.cpp Module03/ex03/main.cpp Module03/ex03/DiamondTrap.h Module03/ex03/DiamondTrap.cpp)
+add_executable(03_03 Module03/ex03/ClapTrap.cpp Module03/ex03/FragTrap.cpp Module03/ex03/main.cpp Module03/ex03/DiamondTrap.hpp Module03/ex03/DiamondTrap.cpp)
 add_executable(04_00 Module04/ex00/Animal.cpp Module04/ex00/Animal.hpp Module04/ex00/Dog.hpp Module04/ex00/Dog.cpp Module04/ex00/Cat.hpp Module04/ex00/Cat.cpp Module04/ex00/main.cpp Module04/ex00/WrongAnimal.hpp Module04/ex00/WrongAnimal.cpp Module04/ex00/WrongCat.hpp Module04/ex00/WrongCat.cpp)
 add_executable(04_01 Module04/ex01/main.cpp Module04/ex01/Animal.cpp Module04/ex01/Animal.hpp Module04/ex01/Dog.hpp Module04/ex01/Dog.cpp Module04/ex01/Cat.hpp Module04/ex01/Cat.cpp Module04/ex01/Brain.hpp Module04/ex01/Brain.cpp)
 add_executable(04_02 Module04/ex02/main.cpp Module04/ex02/Dog.hpp Module04/ex02/Dog.cpp Module04/ex02/Cat.hpp Module04/ex02/Cat.cpp Module04/ex02/Brain.hpp Module04/ex02/Brain.cpp Module04/ex02/AAnimal.hpp Module04/ex02/AAnimal.cpp)

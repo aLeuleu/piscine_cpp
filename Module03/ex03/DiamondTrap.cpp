@@ -1,4 +1,4 @@
-#include "DiamondTrap.h"
+#include "DiamondTrap.hpp"
 
 DiamondTrap::DiamondTrap(void) {
 }
