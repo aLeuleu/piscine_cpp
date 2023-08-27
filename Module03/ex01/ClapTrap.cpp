@@ -2,7 +2,7 @@
 #include <iostream>
 
 ClapTrap::ClapTrap() : _hitPoints(10), _energyPoints(10), _attackDamage(0){
-	std::cout << "Default constructor called" << std::endl;
+	std::cout << "Default ClapTrap constructor called" << std::endl;
 	this->_name = "";
 };
 
@@ -13,12 +13,12 @@ ClapTrap::ClapTrap(std::string name): _hitPoints(10), _energyPoints(10), _attack
 
 ClapTrap::ClapTrap(const ClapTrap& right)
 {
-	std::cout << "Copy constructor called" << std::endl;
+	std::cout << "ClapTrap copy constructor called" << std::endl;
 	*this = right;
 }
 
 ClapTrap::~ClapTrap(){
-	std::cout << "Destructor called" << std::endl;
+	std::cout << "ClapTrap destructor called" << std::endl;
 }
 
 ClapTrap &ClapTrap::operator=(const ClapTrap &right) {
@@ -55,6 +55,8 @@ void		ClapTrap::takeDamage(unsigned int amount)
 	//check underflow
 	if (_hitPoints - amount > _hitPoints)
 		_hitPoints = 0;
+	else
+		_hitPoints -= amount;
 }
 
 void		ClapTrap::beRepaired(unsigned int amount) {

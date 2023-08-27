@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd ./Module03/ex00
+cd ./Module04/ex00
 
 clear
 
@@ -9,7 +9,7 @@ do
   echo
   echo $i
 	cd ../ex$i
-	echo "03_$i :"
+	echo "04_$i :"
 	make leaks
 done
 
