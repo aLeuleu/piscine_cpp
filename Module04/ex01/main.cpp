@@ -4,6 +4,8 @@
 
 int main()
 {
+//	Animal A = Animal();
+
 	std::cout << "1) Creation of 10 animals, halfs dogs, half cats :" << std::endl;
 
 	Animal *animals[10];
