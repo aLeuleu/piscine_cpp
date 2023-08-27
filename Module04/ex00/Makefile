@@ -27,6 +27,6 @@ fclean: clean
 re: fclean all
 
 leaks: all
-	valgrind --leak-check=full --show-leak-kinds=all ./$(NAME)
+	valgrind --silent --leak-check=full --show-leak-kinds=all ./$(NAME)
 
 .PHONY: all clean fclean re leaks
