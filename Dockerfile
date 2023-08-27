@@ -3,6 +3,7 @@ FROM ubuntu:latest
 #install clang++
 RUN apt-get update && apt-get install -y \
     clang++-9 \
+    g++ \
     zsh \
     cmake \
     wget \
