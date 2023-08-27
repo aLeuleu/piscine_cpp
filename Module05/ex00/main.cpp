@@ -30,10 +30,11 @@ int main(void)
 	try
 	{
 		Bureaucrat Kaaris("Kaaris", 150);
+		std::cout << Kaaris;
 		for (int i = 0; i < 200; i++)
 		{
 			Kaaris.incrementGrade();
-			std::cout << Kaaris << std::endl;
+			std::cout << Kaaris;
 		}
 		std::cout << "Failed to trigger GradeTooHighException" << std::endl;
 	}
@@ -48,10 +49,11 @@ int main(void)
 	try
 	{
 		Bureaucrat Ninho("Ninho", 1);
+		std::cout << Ninho;
 		for (int i = 0; i < 200; i++)
 		{
 			Ninho.incrementGrade();
-			std::cout << Ninho << std::endl;
+			std::cout << Ninho;
 		}
 		std::cout << "Failed to trigger GradeTooHighException" << std::endl;
 	}
