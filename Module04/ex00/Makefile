@@ -2,9 +2,10 @@
 NAME=04_00
 
 SRC=Animal.cpp \
-	Brain.cpp	\
 	Cat.cpp		\
 	Dog.cpp		\
+	WrongAnimal.cpp \
+    WrongCat.cpp	\
 	main.cpp
 
 OBJ=$(SRC:.cpp=.o)
