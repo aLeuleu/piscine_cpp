@@ -2,12 +2,12 @@
 #include <iostream>
 
 ClapTrap::ClapTrap(): _hitPoints(10), _energyPoints(10), _attackDamage(0) {
-	std::cout << "Default constructor called" << std::endl;
+	std::cout << "Default ClapTrap constructor called" << std::endl;
 	this->_name = "";
 };
 
-ClapTrap::ClapTrap(std::string name){
-	std::cout << "Constructor called" << std::endl;
+ClapTrap::ClapTrap(std::string name) :  _hitPoints(10), _energyPoints(10), _attackDamage(0){
+	std::cout << "ClapTrap constructor called" << std::endl;
 	this->_name = name;
 }
 

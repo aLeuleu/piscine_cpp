@@ -36,5 +36,15 @@ ScavTrap &ScavTrap::operator=(const ScavTrap &right) {
 void ScavTrap::guardGate() {
 	std::cout << "ScavTrap " << _name << " have enterred in Gate keeper mode" << std::endl;
 }
+void ScavTrap::attack(const std::string &target) {
+	if (this->_energyPoints == 0
+	|| this->_hitPoints == 0)
+	{
+		std::cout << "ScavTrap " << this->_name << " does not have enough HP or energy points to attack ! .." << std::endl;
+		return;
+	}
+	std::cout << "ScavTrap " << _name << " attacks " << target << ", causing " << _attackDamage << " points of damage! " << std::endl;
+	this->_energyPoints --;
+}
 
 
