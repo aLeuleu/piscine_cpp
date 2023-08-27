@@ -10,14 +10,12 @@ try
 		std::cout << A << std::endl;
 		A.incrementGrade();
 		std::cout << A << std::endl;
-
 	}
 	catch (std::exception& e)
 	{
 		std::cout << "Hey ! We caught an exeption !" << std::endl;
 		std::cout << e.what() << std::endl;
 	}
-
 	std::cout << "---------------------" << std::endl;
 
 try
