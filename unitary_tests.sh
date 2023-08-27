@@ -1,10 +1,10 @@
 #!/bin/bash
 
-cd ./Module04/ex00
+cd ./Module05/ex00
 
 clear
 
-for i in 00 01 02
+for i in 00
 do
   echo
   echo
@@ -14,7 +14,7 @@ do
   echo
   echo $i
 	cd ../ex$i
-	echo "04_$i :"
+	echo "05_$i :"
 	make leaks
 done
 
