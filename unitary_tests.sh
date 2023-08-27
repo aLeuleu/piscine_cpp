@@ -1,20 +1,18 @@
 #!/bin/bash
 
-#cd ./Module04/ex00
-#
-#clear
-#
-#for i in 00 01 02 03
-#do
-#  echo
-#  echo $i
-#	cd ../ex$i
-#	echo "04_$i :"
-#	make leaks
-#done
-
 cd ./Module03/ex00
 
 clear
-make
-make leaks
+
+for i in 00 01 02
+do
+  echo
+  echo $i
+	cd ../ex$i
+	echo "03_$i :"
+	make leaks
+done
+
+
+
+
