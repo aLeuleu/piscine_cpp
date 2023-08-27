@@ -16,4 +16,5 @@
 cd ./Module03/ex00
 
 clear
+make
 make leaks

@@ -5,8 +5,6 @@ SRC=ClapTrap.cpp main.cpp
 
 OBJ=$(SRC:.cpp=.o)
 
-HEADERS=$(SRC:.cpp=.hpp)
-
 all: $(NAME)
 
 $(NAME): $(OBJ)
