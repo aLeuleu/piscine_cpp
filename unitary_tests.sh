@@ -9,7 +9,7 @@ for i in 00 01 02 03
 do
 	cd ../ex$i
 	echo "05_$i :"
-	make leaks > /dev/null
+	make leaks
 	echo
 	cat leaks.txt
 done
