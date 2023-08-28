@@ -13,7 +13,7 @@ do
   echo $i
 	cd ../ex$i
 	echo "05_$i :"
-	make leaks
+	make leaks > /dev/null
 	echo
 	cat leaks.txt
 done
