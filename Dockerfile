@@ -15,6 +15,6 @@ RUN sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools
 
 COPY entry_script.sh /entry_script.sh
 
-#CMD ["/bin/zsh", "/entry_script.sh"]
-CMD ["/bin/zsh"]
+CMD ["/bin/zsh", "/entry_script.sh"]
+#CMD ["/bin/zsh"]
 
