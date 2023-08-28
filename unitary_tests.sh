@@ -4,7 +4,7 @@ cd ./Module05/ex00
 
 clear
 
-for i in 00 01 02
+for i in 00 01 02 03
 do
   echo
   echo
