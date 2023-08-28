@@ -1,41 +1,67 @@
 
 #include "Bureaucrat.hpp"
-#define BUR_SIZE 5
-#define FORM_SIZE 7
+#include "ShrubberyCreationForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "PresidentialPardonForm.hpp"
 
-int main(void)
-{
-		Bureaucrat bur10("bur10", 10);
-		Bureaucrat bur20("bur20", 20);
-		Bureaucrat bur30("bur30", 30);
-		Bureaucrat bur40("bur40", 40);
-		Bureaucrat bur50("bur50", 50);
-		Bureaucrat *burTab[BUR_SIZE] = {&bur10, &bur20, &bur30, &bur40, &bur50};
-		Form		formA("formA", 1, 150);
-		Form		formB("formB", 10, 21);
-		Form		formC("formC", 11, 20);
-		Form		formD("formD", 19, 19);
-		Form		formE("formE", 20, 11);
-		Form		formF("formF", 21, 10);
-		Form		formG("formG", 150, 1);
-//		Form		formH("formH", 151, 1); //uncomment to test exception
-//		Form		formI("formI", 150, 0);
-//		Form		formj("formj", 150, 151);
-		Form *formTab[FORM_SIZE] = {&formA, &formB, &formC, &formD, &formE, &formF, &formG};
-
-		for (int i = 0; i < BUR_SIZE; i++) //for each bureaucrat..
-		{
-			for (int j = 0; j < FORM_SIZE; j++) //for each form..
-			{
-				try
-				{
-					burTab[i]->signForm(*formTab[j]); //..try to sign the form
-				}
-				catch(const std::exception& e)
-				{
-					std::cerr << e.what() << '\n';
-				}
-			}
-				std::cout << std::endl;
-		}
+void printGreen(std::string str) {
+	std::cout << "\033[1;32m" << str << "\033[0m" << std::endl;
 }
+
+int main(void) {
+	printGreen("1) Bureaucrat JimHalpert will try to sign ShrubberyCreationForm A1 (target bear).");
+	ShrubberyCreationForm A1 = ShrubberyCreationForm("A1", "bear"); //145 to be signed, 137 to be exec
+	Bureaucrat JimHalpert = Bureaucrat("JimHalpert", 146);
+	std::cout << A1 << std::endl;
+	try {
+		JimHalpert.signForm(A1); //should throw grade too low exception
+	}
+	catch (std::exception &e) {
+		std::cout << e.what() << std::endl;
+	}
+	JimHalpert.incrementGrade();
+	JimHalpert.signForm(A1); //should succeed
+	std::cout << A1 << std::endl;
+
+
+
+	//test2
+	printGreen("2) Bureaucrat DwightSchrute will try to execute ShrubberyCreationForm A1 (target bear).");
+	Bureaucrat DwightSchrute = Bureaucrat("DwightShrute", 138);
+	try {
+		DwightSchrute.executeForm(A1); //should throw grade too low exception
+	}
+	catch (std::exception &e) {
+		std::cout << e.what() << std::endl;
+	}
+	DwightSchrute.incrementGrade();
+	DwightSchrute.executeForm(A1); //should succeed
+
+	//test3
+	printGreen("3) Bureaucrat DwightSchrute will try to execute ShrubberyCreationForm A2 (the form is not signed).");
+	ShrubberyCreationForm A2 = ShrubberyCreationForm("A2", "cat"); //145 to be signed, 137 to be exec
+	try {
+		DwightSchrute.executeForm(A2); //should throw Form is not signed exception
+	}
+	catch (std::exception &e) {
+		std::cout << e.what() << std::endl;
+	}
+
+	//test4
+	printGreen("4) Bureaucrat MichaelScott sign and execute RobotomyRequestForm A3 (target cat).");
+	RobotomyRequestForm A3 = RobotomyRequestForm("A3", "cat"); //72 to be signed, 45 to be exec
+	Bureaucrat MichaelScott = Bureaucrat("MichaelScott", 45);
+
+	MichaelScott.signForm(A3);
+	MichaelScott.executeForm(A3);
+
+	//test5
+	printGreen("5) Bureaucrat KevinMalone sign and execute PresidentialPardonForm A4 (target Pam Beesly).");
+	PresidentialPardonForm A4 = PresidentialPardonForm("A4", "Pam Beesly"); //25 to be signed, 5 to be exec
+	Bureaucrat KevinMalone = Bureaucrat("KevinMalone", 5);
+
+	KevinMalone.signForm(A4);
+	KevinMalone.executeForm(A4);
+
+}
+

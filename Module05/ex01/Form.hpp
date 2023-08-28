@@ -7,7 +7,7 @@ class Bureaucrat;
 class Form {
 private:
 	const std::string	_name;
-	bool				_isSigned = false;
+	bool				_isSigned;
 	const int			_gradeToSign;
 	const int			_gradeToExecute;
 public:
@@ -28,4 +28,7 @@ public:
 		const char* what() const throw();
 	};
 };
+
+std::ostream &operator<<(std::ostream &os, const Form &form);
+
 #endif

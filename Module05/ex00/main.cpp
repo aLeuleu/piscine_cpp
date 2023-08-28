@@ -55,7 +55,7 @@ int main(void)
 			Ninho.decrementGrade();
 			std::cout << Ninho;
 		}
-		std::cout << "Failed to trigger GradeTooHighException" << std::endl;
+		std::cout << "Failed to trigger GradeTooLowException" << std::endl;
 	}
 	catch (std::exception& e)
 	{

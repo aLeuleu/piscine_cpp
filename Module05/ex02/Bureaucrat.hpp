@@ -3,8 +3,7 @@
 #include <iostream>
 #include "AForm.hpp"
 
-class Form;
-
+class AForm;
 class Bureaucrat
 {
 public:
@@ -25,7 +24,8 @@ public:
 	{
 		const char * what() const throw();
 	};
-	void	signForm(Form &form);
+	void	signForm(AForm &form);
+	void	executeForm(AForm const & form);
 private:
 	const std::string _name;
 	int _grade;

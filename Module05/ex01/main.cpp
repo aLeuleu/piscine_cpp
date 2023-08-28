@@ -38,4 +38,31 @@ int main(void)
 			}
 				std::cout << std::endl;
 		}
+
+		std::cout << "This is the form A :" << std::endl;
+		std::cout << formA << std::endl;
+
+		std::cout << "This is the form B :" << std::endl;
+		std::cout << formB << std::endl;
+
+		std::cout << "Exception test : " << std::endl;
+		try
+		{
+			Form formH("formH", 151, 1);
+		}
+		catch(const std::exception& e)
+		{
+			std::cerr << e.what() << '\n';
+		}
+
+		try
+		{
+			Form formI("formI", 150, 0);
+		}
+		catch(const std::exception& e)
+		{
+			std::cerr << e.what() << '\n';
+		}
+
 }
+

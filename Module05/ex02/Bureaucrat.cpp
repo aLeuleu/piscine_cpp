@@ -11,6 +11,7 @@ Bureaucrat::Bureaucrat(std::string name, int grade) : _name(name), _grade(grade)
 		throw Bureaucrat::GradeTooHighException();
 	else if (grade > 150)
 		throw Bureaucrat::GradeTooLowException();
+	std::cout << "Creation of " << _name << " with grade " << grade << std::endl;
 }
 
 Bureaucrat::~Bureaucrat()
@@ -46,6 +47,7 @@ void Bureaucrat::incrementGrade()
 	if (_grade - 1 < 1)
 		throw Bureaucrat::GradeTooHighException();
 	_grade--;
+	std::cout << _name << " has been promoted to grade " << this->getGrade() << std::endl;
 }
 
 void Bureaucrat::decrementGrade()
@@ -53,9 +55,10 @@ void Bureaucrat::decrementGrade()
 	if (_grade + 1 > 150)
 		throw Bureaucrat::GradeTooLowException();
 	_grade++;
+	std::cout << _name << " has been demoted to grade " << this->getGrade() << std::endl;
 }
 
-void Bureaucrat::signForm(Form &form) {
+void Bureaucrat::signForm(AForm &form) {
 	try {
 		form.beSigned(*this);
 		std::cout << _name << " signs " << form.getName() << std::endl;
@@ -64,7 +67,15 @@ void Bureaucrat::signForm(Form &form) {
 		std::cout << _name << " cannot sign " << form.getName() << " because " << e.what() << std::endl;
 	}
 }
-
+void Bureaucrat::executeForm(const AForm &form) {
+	try {
+		form.execute(*this);
+		std::cout << _name << " executed " << form.getName() << std::endl;
+	}
+	catch (std::exception &e) {
+		std::cout << _name << " cannot execute " << form.getName() << " because " << e.what() << std::endl;
+	}
+}
 
 std::ostream& operator<<(std::ostream& os, const Bureaucrat& bureaucrat)
 {
