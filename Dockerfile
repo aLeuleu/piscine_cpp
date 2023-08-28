@@ -18,5 +18,5 @@ COPY entry_script.sh /entry_script.sh
 RUN git clone https://github.com/aLeuleu/piscine_cpp.git test_cpp
 
 #CMD ["/bin/zsh", "/entry_script.sh"]
-CMD ["/bin/zsh", "/test_cpp"]
+CMD ["/bin/zsh"]
 
