@@ -33,7 +33,7 @@ AForm *Intern::makeForm(std::string formName, std::string formTarget) {
 	if (i >= 3)
 	{
 		std::cout << "The form " << formName << " does not exist !" << std::endl;
-		return nullptr;
+		return NULL;
 	}
 
 	std::cout << "Intern creates " << formName << std::endl;
@@ -42,5 +42,5 @@ AForm *Intern::makeForm(std::string formName, std::string formTarget) {
 		case 1: return new RobotomyRequestForm(formTarget);
 		case 2: return new ShrubberyCreationForm(formTarget);
 	}
-	return nullptr;
+	return NULL;
 }
