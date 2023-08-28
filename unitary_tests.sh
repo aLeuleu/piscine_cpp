@@ -12,6 +12,8 @@ do
 	make leaks
 	echo "------------------"
 	cat leaks.txt
+	echo "------------------"
+
 done
 
 
