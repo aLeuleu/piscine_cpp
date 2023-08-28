@@ -14,6 +14,7 @@ do
 	cd ../ex$i
 	echo "05_$i :"
 	make leaks
+	cat leaks.txt
 done
 
 
