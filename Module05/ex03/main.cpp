@@ -25,7 +25,7 @@ int main(void) {
 	JoeyTribbiani.signForm(*GenericForm); //should succeed
 	std::cout << *GenericForm << std::endl;
 
-
+	delete GenericForm;
 
 }
 
