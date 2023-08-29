@@ -13,7 +13,7 @@ Base * generate(void){
 		case 1: return (Base *) new B; break;
 		case 2: return (Base *) new C; break;
 	}
-	return nullptr;
+	return NULL;
 }
 
 void identify(Base *p)
@@ -47,7 +47,6 @@ void identify(Base &p)
 		std::cout << "C";
 	} catch (...){ }
 	std::cout << " ";
-
 }
 
 

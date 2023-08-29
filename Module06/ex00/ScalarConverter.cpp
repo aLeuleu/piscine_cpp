@@ -25,7 +25,6 @@ void ScalarConverter::convert(const std::string &value) {
 	}
 }
 
-
 ScalarConverter::ScalarConverter(const ScalarConverter &other) {
 	*this = other;
 }
