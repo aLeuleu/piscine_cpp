@@ -25,4 +25,6 @@ add_executable(05_00 Module05/ex00/main.cpp Module05/ex00/Bureaucrat.hpp Module0
 add_executable(05_01 Module05/ex01/Bureaucrat.cpp Module05/ex01/Form.cpp Module05/ex01/Form.hpp Module05/ex01/main.cpp)
 add_executable(05_02 Module05/ex02/main.cpp Module05/ex02/Bureaucrat.cpp Module05/ex02/AForm.cpp Module05/ex02/ShrubberyCreationForm.cpp Module05/ex02/ShrubberyCreationForm.hpp Module05/ex02/ShrubberyCreationForm.hpp Module05/ex02/RobotomyRequestForm.cpp Module05/ex02/RobotomyRequestForm.hpp Module05/ex02/PresidentialPardonForm.cpp Module05/ex02/PresidentialPardonForm.hpp Module05/ex03/Intern.cpp Module05/ex03/Intern.hpp)
 add_executable(05_03 Module05/ex03/main.cpp Module05/ex03/Bureaucrat.cpp Module05/ex03/AForm.cpp Module05/ex03/ShrubberyCreationForm.cpp Module05/ex03/ShrubberyCreationForm.hpp Module05/ex03/ShrubberyCreationForm.hpp Module05/ex03/RobotomyRequestForm.cpp Module05/ex03/RobotomyRequestForm.hpp Module05/ex03/PresidentialPardonForm.cpp Module05/ex03/PresidentialPardonForm.hpp Module05/ex03/Intern.cpp Module05/ex03/Intern.hpp)
-add_executable(06_00 Module06/ex00/main.cpp Module06/ex00/ScalarConverter.h Module06/ex00/ScalarConverter.cpp)
+add_executable(06_00 Module06/ex00/main.cpp Module06/ex00/ScalarConverter.hpp Module06/ex00/ScalarConverter.cpp)
+add_executable(06_01 Module06/ex01/Serializer.cpp Module06/ex01/Serializer.hpp Module06/ex01/Serializer.cpp Module06/ex01/Serializer.hpp Module06/ex01/main.cpp)
+add_executable(06_02 Module06/ex02/Base.cpp Module06/ex02/Base.hpp Module06/ex02/main.cpp)

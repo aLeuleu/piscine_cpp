@@ -26,7 +26,7 @@ private:
 	bool        checkExecutePerms(const Bureaucrat& bureaucrat) const;
 	class GradeTooHighException : public std::exception {
 		const char* what() const throw();
-	};
+	};w
 	class GradeTooLowException : public std::exception {
 		const char* what() const throw();
 	};
