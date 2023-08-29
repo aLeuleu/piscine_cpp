@@ -1,11 +1,9 @@
 #ifndef SERIALIZER_HPP
 # define SERIALIZER_HPP
 
-# ifndef _UINTPTR_T
-#  define _UINTPTR_T
+
 typedef unsigned long           uintptr_t;
 
-#endif /* _UINTPTR_T */
 
 #include <string>
 
