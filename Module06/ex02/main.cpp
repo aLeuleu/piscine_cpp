@@ -56,13 +56,17 @@ int main(void)
 	srand(time(NULL));
 
 	for (int i = 0; i < 20; i++){
-		identify(generate());
+		Base * ptr = generate();
+		identify(ptr);
+		delete ptr;
 	}
 
 	std::cout << std::endl;
 
 	for (int i = 0; i < 20; i++){
-		identify(*generate());
+		Base * ptr = generate();
+		identify(*ptr);
+		delete ptr;
 	}
 
 	return 0;
