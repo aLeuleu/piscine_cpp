@@ -1,10 +1,7 @@
 #ifndef SERIALIZER_HPP
 # define SERIALIZER_HPP
 
-
-typedef unsigned long           uintptr_t;
-
-
+#include <stdint.h>
 #include <string>
 
 struct Data{
