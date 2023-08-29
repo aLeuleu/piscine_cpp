@@ -17,7 +17,7 @@ void ScalarConverter::convert(const std::string &value) {
 		if (value.length() == 3 && value[0] == '\'' && value[2] == '\'' )
 			d = static_cast<double>(value[1]);
 		else
-			d = strtod(value.c_str(), nullptr);
+			d = strtod(value.c_str(), NULL);
 		convertToChar(d);
 		convertToInt(d);
 		convertToFloat(d);
