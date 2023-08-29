@@ -1,6 +1,5 @@
 #include <iostream>
 #include "Serializer.hpp"
-#include <cstdint>
 
 Serializer::Serializer(void) {}
 
