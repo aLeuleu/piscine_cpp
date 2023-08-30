@@ -1,5 +1,7 @@
 #include <iostream>
 #include "Array.hpp"
+#include <time.h>
+#include <stdlib.h>
 
 #define MAX_VAL 750
 
