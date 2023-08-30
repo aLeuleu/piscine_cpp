@@ -1,5 +1,7 @@
 #include "iter.hpp"
+#include <iostream>
 #include <time.h>
+
 int main()
 {
 	srand(time(NULL));
