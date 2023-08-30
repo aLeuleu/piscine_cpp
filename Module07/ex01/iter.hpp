@@ -2,6 +2,8 @@
 # define CPP_MODULE07_EX01_ITER_HPP_
 #include <cstddef>
 #include <iostream>
+#include <stdlib.h>
+#include <time.h>
 
 template<typename T>
 void	iter(T* array, size_t size, void (*callback)(T&))
