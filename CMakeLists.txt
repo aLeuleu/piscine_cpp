@@ -28,3 +28,6 @@ add_executable(05_03 Module05/ex03/main.cpp Module05/ex03/Bureaucrat.cpp Module0
 add_executable(06_00 Module06/ex00/main.cpp Module06/ex00/ScalarConverter.hpp Module06/ex00/ScalarConverter.cpp)
 add_executable(06_01 Module06/ex01/Serializer.cpp Module06/ex01/Serializer.hpp Module06/ex01/Serializer.cpp Module06/ex01/Serializer.hpp Module06/ex01/main.cpp)
 add_executable(06_02 Module06/ex02/Base.cpp Module06/ex02/Base.hpp Module06/ex02/main.cpp)
+add_executable(07_00 Module07/ex00/main.cpp Module07/ex00/whatever.hpp)
+add_executable(07_01 Module07/ex01/main.cpp Module07/ex01/iter.hpp)
+add_executable(07_02 Module07/ex02/Array.hpp Module07/ex02/main.cpp)
