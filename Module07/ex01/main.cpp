@@ -1,7 +1,8 @@
 #include "iter.hpp"
-
+#include <time.h>
 int main()
 {
+	srand(time(NULL));
 	int arrayA[10];
 	float arrayB[10];
 	const int arrayC[3] = {1, 2, 3};
