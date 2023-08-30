@@ -1,15 +1,7 @@
 #include <iostream>
 #include "Array.hpp"
-#include <time.h>
-#include <stdlib.h>
 
 #define MAX_VAL 750
-
-template<typename T>
-void	print(const T a){
-	std::cout << a << std::endl;
-}
-
 int main(int, char**)
 {
     Array<int> numbers(MAX_VAL);
@@ -58,6 +50,4 @@ int main(int, char**)
     }
     delete [] mirror;//
     return 0;
-
-
 }
