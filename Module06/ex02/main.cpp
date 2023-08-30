@@ -1,6 +1,7 @@
 #include "Base.hpp"
 #include <iostream>
 #include <time.h>
+#include <stdlib.h>
 
 Base * generate(void){
 
