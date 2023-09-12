@@ -1,8 +1,8 @@
 FROM ubuntu:latest
 
-#install clang++
+#install c++
 RUN apt-get update && apt-get install -y \
-    clang++-9 \
+    c++-9 \
     g++ \
     zsh \
     cmake \

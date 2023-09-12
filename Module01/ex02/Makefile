@@ -4,7 +4,7 @@ NAME=HI_THIS_IS_BRAIN
 SRC=main.cpp 
 
 all:
-	@clang++ -Wall -Wextra -Werror $(SRC) -o $(NAME) -std=c++98
+	@c++ -Wall -Wextra -Werror $(SRC) -o $(NAME) -std=c++98
 
 clean:
 	@rm -rf $(NAME)

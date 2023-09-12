@@ -31,3 +31,6 @@ add_executable(06_02 Module06/ex02/Base.cpp Module06/ex02/Base.hpp Module06/ex02
 add_executable(07_00 Module07/ex00/main.cpp Module07/ex00/whatever.hpp)
 add_executable(07_01 Module07/ex01/main.cpp Module07/ex01/iter.hpp)
 add_executable(07_02 Module07/ex02/Array.hpp Module07/ex02/main.cpp)
+add_executable(08_00 Module08/ex00/easyfind.hpp Module08/ex00/easyfind.hpp Module08/ex00/easyfind.hpp Module08/ex00/easyfind.hpp Module08/ex00/main.cpp)
+add_executable(08_01 Module08/ex01/Span.cpp Module08/ex01/Span.hpp Module08/ex01/Span.hpp Module08/ex01/main.cpp)
+add_executable(08_02 Module08/ex02/main.cpp Module08/ex02/MutantStack.hpp )
