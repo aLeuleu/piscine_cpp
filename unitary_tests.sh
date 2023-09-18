@@ -8,6 +8,7 @@ for i in 00 01 02
 #for i in 01
 do
 	cd ../ex$i
+	ls -lah
 	echo "08_$i :"
 	make leaks
 	echo "------------------"
