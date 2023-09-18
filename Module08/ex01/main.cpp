@@ -18,11 +18,11 @@ int main() {
 	srand(time(NULL));
 	Span sp2;
 
-	sp2 = Span(20000);
+	sp2 = Span(200000);
 	std::cout << "f2" << std::endl;
 
 	try {
-		sp2.randRange(20000);
+		sp2.randRange(200000);
 		std::cout << "f3" << std::endl;
 
 	}
