@@ -17,10 +17,10 @@ int main() {
 	srand(time(NULL));
 	Span sp2;
 
-	sp2 = Span(20000000);
+	sp2 = Span(2000000);
 
 	try {
-		sp2.randRange(20000000);
+		sp2.randRange(2000000);
 	}
 	catch (...) {}
 //		sp2.displayData();
