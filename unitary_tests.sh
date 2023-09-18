@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd ./Module08/ex00
+cd ./Module09/ex00
 
 clear
 
@@ -9,7 +9,7 @@ for i in 00 01 02
 do
 	cd ../ex$i
 	ls -lah
-	echo "08_$i :"
+	echo "09_$i :"
 	make leaks
 	echo "------------------"
 	cat leaks.txt
