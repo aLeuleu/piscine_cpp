@@ -3,6 +3,7 @@ NAME=08_01
 
 SRC= main.cpp \
 	Span.cpp
+
 OBJ=$(SRC:.cpp=.o)
 
 all: $(NAME)
@@ -22,6 +23,5 @@ fclean: clean
 re: fclean all
 
 leaks: all
-	valgrind --quiet --leak-check=full --show-leak-kinds=all --log-file=leaks.txt -- ./$(NAME) > $(NAME)_output.txt 2>&1
-
+	valgrind --quiet --leak-check=full --show-leak-kinds=all --log-file=leaks.txt -- ./$(NAME)
 .PHONY: all clean fclean re leaks
