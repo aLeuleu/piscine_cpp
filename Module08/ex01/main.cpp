@@ -13,6 +13,7 @@ int main() {
 //	sp.displayData();
 //	std::cout << sp.shortestSpan() << std::endl;
 //	std::cout << sp.longestSpan() << std::endl;
+	std::cout << "f1" << std::endl;
 
 	srand(time(NULL));
 	Span sp2;
@@ -24,6 +25,7 @@ int main() {
 	catch (...) {}
 //		sp2.displayData();
 
+	std::cout << "f2" << std::endl;
 
 	unsigned int t;
 
