@@ -21,10 +21,10 @@ cd ../ex02
 make
 
 ./PmergeMe "2 0"
-./PmergeMe "2 65 3"
-./PmergeMe "2 65 3 6"
-./PmergeMe "2 65 3 6 7 24"
-./PmergeMe "2 65 3 6 7 24 76"
+./PmergeMe "2 65 0"
+./PmergeMe "2 65 3 0"
+./PmergeMe "2 65 3 6 7 0"
+./PmergeMe "2 65 3 6 7 24 0"
 
 
 
