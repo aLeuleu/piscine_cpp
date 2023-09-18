@@ -64,7 +64,7 @@ int Span::longestSpan2() {
 
 void Span::randRange(int range) {
 	try{
-		for (size_t i = 0; i < range; i ++)
+		for (int i = 0; i < range; i ++)
 			addNumber(rand()%100);
 	}
 	catch (std::exception &e){
