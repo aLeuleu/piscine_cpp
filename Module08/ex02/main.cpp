@@ -2,16 +2,18 @@
 #include <iostream>
 #include "MutantStack.hpp"
 #include <stack>
+
+
 int main()
 {
 	MutantStack<int> mutantA;
 
-	std::cout << "Stack empty :" << mutantA.empty() << std::endl;
+	std::cout << "Stack empty (exepcted true ):" << mutantA.empty() << std::endl;
 	std::cout << "size :" << mutantA.size() << std::endl;
 
 	const int a = 1;
 	mutantA.push(a);
-	std::cout << "Stack empty :" << mutantA.empty() << std::endl;
+	std::cout << "Stack empty (expected false):" << mutantA.empty() << std::endl;
 
 	int b = 2;
 	int c = 3;
@@ -26,19 +28,11 @@ int main()
 	std::cout << "size :" << mutantA.size() << std::endl;
 
 
-	for (int i = 0; i < 7; i++)
+	for (int i = 0; i < 5; i++)
 	{
-		try{
-		std::cout << mutantA.top()<< " - ";
-		std::cout << mutantA.pop() << std::endl;
-		}
-		catch (std::exception &e){
-			std::cout << e.what() << std::endl;
-		}
+		std::cout << mutantA.top( )<< std::endl;
+		mutantA.pop();
 	}
-
-	std::cout << "size :" << mutantA.size() << std::endl;
-	std::cout << "Stack empty :" << mutantA.empty() << std::endl;
 
 	b = 20;
 	c = 30;
@@ -52,15 +46,12 @@ int main()
 	mutantA.push(d);
 	mutantA.push(e);
 
-	for (int i = 0; i < 7; i++)
+	std::cout << std::endl;
+
+	for (int i = 0; i < 5; i++)
 	{
-		try{
-			std::cout << mutantA.top()<< " - ";
-			std::cout << mutantA.pop() << std::endl;
-		}
-		catch (std::exception &e){
-			std::cout << e.what() << std::endl;
-		}
+		std::cout << mutantA.top( )<< std::endl;
+		mutantA.pop();
 	}
 
 	mutantA.push(a);
@@ -69,15 +60,26 @@ int main()
 	mutantA.push(d);
 	mutantA.push(e);
 
-	std::cout << std::endl << "final test" << std::endl;
-	MutantStack<int>::Iterator it = mutantA.begin();
-	MutantStack<int>::Iterator ite = mutantA.end();
+	std::cout << std::endl << "iterator test" << std::endl;
+	MutantStack<int>::iterator it = mutantA.begin();
+	MutantStack<int>::iterator ite = mutantA.end();
 	++it;
 	--it;
 	while (it != ite)
 	{
 		std::cout << *it << std::endl;
 		++it;
+	}
+
+	std::cout << std::endl << "reverse iterator test" << std::endl;
+	MutantStack<int>::reverse_iterator rit = mutantA.rbegin();
+	MutantStack<int>::reverse_iterator rite = mutantA.rend();
+	++rit;
+	--rit;
+	while (rit != rite)
+	{
+		std::cout << *rit << std::endl;
+		++rit;
 	}
 
 	std::stack<int> s(mutantA);
