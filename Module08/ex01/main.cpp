@@ -13,18 +13,14 @@ int main() {
 //	sp.displayData();
 //	std::cout << sp.shortestSpan() << std::endl;
 //	std::cout << sp.longestSpan() << std::endl;
-	std::cout << "f1" << std::endl;
 
 	srand(time(NULL));
 	Span sp2;
 
 	sp2 = Span(200000);
-	std::cout << "f2" << std::endl;
 
 	try {
 		sp2.randRange(200000);
-		std::cout << "f3" << std::endl;
-
 	}
 	catch (...) {}
 //		sp2.displayData();
@@ -33,7 +29,7 @@ int main() {
 	unsigned int t;
 
 	t = clock();
-	int longestSpan = sp2.longestSpan();
+//	int longestSpan = sp2.longestSpan();
 	t = clock() - t;
 	std::cout << "longestSpan() took " << t << " clicks (" << ((float) t) / CLOCKS_PER_SEC << " seconds)" << std::endl;
 
