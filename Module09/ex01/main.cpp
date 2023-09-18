@@ -1,6 +1,7 @@
 
 #include <stack>
 #include <iostream>
+#include <cstring>
 
 enum op {
 	plus = '+',
