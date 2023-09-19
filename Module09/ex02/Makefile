@@ -8,7 +8,7 @@ OBJ=$(SRC:.cpp=.o)
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	c++ -g3 -Wall -Wextra -Werror -o $(NAME) $(OBJ) -std=c++98
+	c++ -g3 -fsanitize=address -Wall -Wextra -Werror -o $(NAME) $(OBJ) -std=c++98
 
 %.o: %.cpp %.hpp
 	c++ -g3 -Wall -Wextra -Werror -c $< -o $@ -std=c++98

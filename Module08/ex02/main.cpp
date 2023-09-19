@@ -8,7 +8,7 @@ int main()
 {
 	MutantStack<int> mutantA;
 
-	std::cout << "Stack empty (exepcted true ):" << mutantA.empty() << std::endl;
+	std::cout << "Stack empty (expected true ):" << mutantA.empty() << std::endl;
 	std::cout << "size :" << mutantA.size() << std::endl;
 
 	const int a = 1;

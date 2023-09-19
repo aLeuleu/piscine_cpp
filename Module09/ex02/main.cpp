@@ -14,6 +14,16 @@ void swap(T &a, T &b) {
 	a = tmp;
 }
 
+template<typename T>
+void display(T &v) {
+
+	typename T::const_iterator it = v.begin();
+	typename T::const_iterator ite = v.end();
+	while (it != ite)
+		std::cout << " " << *(it++);
+	std::cout << std::endl;
+}
+
 bool correct_number_of_arg(int argc);
 void exit_with_error(int i);
 void parsing_argv1(const std::string &input, std::vector<int> &A, std::list<int> &B);
@@ -25,18 +35,7 @@ std::vector<int> merge_custom(std::vector<int> left, std::vector<int> right);
 std::list<int> merge_custom(std::list<int> left, std::list<int> right);
 void insertionSort(std::vector<int> &vector);
 void insertionSort(std::list<int> &vector);
-
 void parse_multiple_args(char **argv, int argc, std::list<int> &B, std::vector<int> &A);
-
-template<typename T>
-void display(T &v) {
-
-	typename T::const_iterator it = v.begin();
-	typename T::const_iterator ite = v.end();
-	while (it != ite)
-		std::cout << " " << *(it++);
-	std::cout << std::endl;
-}
 
 int main(int argc, char **argv) {
 	std::vector<int> A;
@@ -53,11 +52,24 @@ int main(int argc, char **argv) {
 	std::cout << "Before: " << std::endl;
 	display(A);
 //	display(B);
+
+	unsigned int t1;
+	t1 = clock();
 	mergeInsertionSort(A);
+	t1 = clock() - t1;
+
+	unsigned int t2;
+	t2 = clock();
 	mergeInsertionSort(B);
+	t2 = clock() - t2;
+
 	std::cout << "After : " << std::endl;
 	display(A);
 //	display(B);
+
+	std::cout << "Time to process a range of " << A.size() << " elements with vector : " << t1 << " clicks (" << ((float) t1) / CLOCKS_PER_SEC << " seconds)" << std::endl;
+	std::cout << "Time to process a range of " << B.size() << " elements with list : " << t2 << " clicks (" << ((float) t2) / CLOCKS_PER_SEC << " seconds)" << std::endl;
+
 	return 0;
 }
 
