@@ -18,6 +18,7 @@ clear
 #done
 
 cd ../ex02
+clear
 make
 ls -lah
 chmod 777 PmergeMe
