@@ -20,7 +20,7 @@ clear
 cd ../ex02
 make
 
-valgrind ./PmergeMe "55499 7002 1"
+valgrind ./PmergeMe 55499 7002 1
 #./PmergeMe "2 65 0"
 #./PmergeMe "2 65 3 0"
 #./PmergeMe "2 65 3 6 7 0" #KO
