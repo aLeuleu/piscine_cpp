@@ -22,7 +22,7 @@ fclean: clean
 
 re: fclean all
 
-leaks: all
-	valgrind --quiet --leak-check=full --show-leak-kinds=all --log-file=leaks.txt -- ./$(NAME) > $(NAME)_output.txt 2>&1
+leaks: re
+	valgrind --quiet --leak-check=full --show-leak-kinds=all --log-file=leaks.txt -- ./$(NAME) ./input.txt> $(NAME)_output.txt 2>&1
 
 .PHONY: all clean fclean re leaks

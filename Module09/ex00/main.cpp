@@ -3,7 +3,7 @@
 #include <map>
 #include "BitcoinExchange.hpp"
 
-#define DATABASE "/Users/aurelienlevra/CLionProjects/cpp/Module09/ex00/data.csv"
+#define DATABASE "data.csv"
 #define MISSING_INPUT_FILE 1
 #define CANNOT_OPEN_FILE 2
 
