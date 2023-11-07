@@ -3,11 +3,8 @@
 #include <stdlib.h>
 
 BitcoinExchange::BitcoinExchange(void) {}
-
 BitcoinExchange::BitcoinExchange(const BitcoinExchange &other) { *this = other; }
-
 BitcoinExchange::~BitcoinExchange(void) {}
-
 BitcoinExchange &BitcoinExchange::operator=(const BitcoinExchange &other) {
 	if (this != &other) {
 		data = other.data;
@@ -77,8 +74,6 @@ void BitcoinExchange::processLine() {
 				  << value * rate->second << std::endl;
 	}
 }
-
-
 bool BitcoinExchange::isValidDate(std::string date) {
 	static const int dayPerMonth[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 

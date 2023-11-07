@@ -237,10 +237,10 @@ bool correct_number_of_arg(int argc) {
 }
 
 void parsing_argv1(const std::string &input, std::vector<int> &A, std::list<int> &B) {
-	std::istringstream iss(input); // Create a string stream for parsing_argv1
+	std::istringstream iss(input);
 
 	int number;
-	while (iss >> number) { // Parse integers from the string stream
+	while (iss >> number) {
 		A.push_back(number);
 		B.push_back(number);
 	}

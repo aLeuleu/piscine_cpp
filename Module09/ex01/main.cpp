@@ -45,18 +45,14 @@ int main(int argc, char **argv) {
 
 	int i = 0;
 	while (argv[1][i]) {
-//		if (argv[1][i] != ' ')
-//			std::cout << "argv[1][" << i << "] : "<<argv[1][i] << std::endl;
 		if (is_RPN_operator(argv[1][i])){
 			if (!unstack(stack, argv[1][i])){
-				std::cerr << "Bad usage" << std::endl;
+				std::cerr << "Not a valid expression" << std::endl;
 				return (1);
 			}
 		}
 		if (isdigit(argv[1][i]))
 			stack.push(argv[1][i] - '0');
-//		if (argv[1][i] != ' ')
-//			printStack(stack);
 		i++;
 	}
 	printStack(stack);
@@ -65,11 +61,11 @@ int main(int argc, char **argv) {
 
 void printStack(std::stack<int> stack_1) {
 	std::stack<int> stack = stack_1;
-	while (stack.size()) {
-		std::cout << stack.top() << " ";
-		stack.pop();
+	if (stack.size() == 1) {
+		std::cout << stack.top() << std::endl;
+		return;
 	}
-	std::cout << std::endl;
+	std::cout << "Not a valid expression" << std::endl;
 }
 
 bool unstack(std::stack<int> &stack, char op) {
@@ -79,6 +75,8 @@ bool unstack(std::stack<int> &stack, char op) {
 	stack.pop();
 	int b = stack.top();
 	stack.pop();
+	if (a == 0 && op == divi)
+		return false;
 	int res = operation(a, b, op);
 	stack.push(res);
 	return true;

@@ -5,18 +5,19 @@
 #include <fstream>
 class BitcoinExchange {
 	public:
-		std::map<std::string, float>	data;
-		std::ifstream					databaseFile;
-		std::ifstream					inputFile;
 		BitcoinExchange();
 		BitcoinExchange(const BitcoinExchange &other);
 		virtual ~BitcoinExchange();
-
 		BitcoinExchange &operator=(const BitcoinExchange &other);
+
 		void parseDB();
 		void processInputFile();
 		void processLine();
 		bool isValidDate(std::string date);
-		};
 
+	private:
+		std::map<std::string, float>	data;
+		std::ifstream					databaseFile;
+		std::ifstream					inputFile;
+		};
 #endif
