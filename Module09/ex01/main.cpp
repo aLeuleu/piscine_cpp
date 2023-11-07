@@ -12,7 +12,7 @@ enum op {
 bool is_valid_RPN_expression(char *str);
 bool is_RPN_operator(char i);
 bool check_spaces(char *str);
-void unstack(std::stack<int> &stack, char op);
+bool unstack(std::stack<int> &stack, char op);
 int operation(int &a, int &b, char op);
 
 bool begin_with_a_digit(char *str);
@@ -47,8 +47,12 @@ int main(int argc, char **argv) {
 	while (argv[1][i]) {
 //		if (argv[1][i] != ' ')
 //			std::cout << "argv[1][" << i << "] : "<<argv[1][i] << std::endl;
-		if (is_RPN_operator(argv[1][i]))
-			unstack(stack, argv[1][i]);
+		if (is_RPN_operator(argv[1][i])){
+			if (!unstack(stack, argv[1][i])){
+				std::cerr << "Bad usage" << std::endl;
+				return (1);
+			}
+		}
 		if (isdigit(argv[1][i]))
 			stack.push(argv[1][i] - '0');
 //		if (argv[1][i] != ' ')
@@ -68,17 +72,19 @@ void printStack(std::stack<int> stack_1) {
 	std::cout << std::endl;
 }
 
-void unstack(std::stack<int> &stack, char op) {
+bool unstack(std::stack<int> &stack, char op) {
+	if (stack.size() < 2)
+		return false;
 	int a = stack.top();
 	stack.pop();
 	int b = stack.top();
-	int res = operation(a, b, op);
 	stack.pop();
+	int res = operation(a, b, op);
 	stack.push(res);
+	return true;
 }
 
 int operation(int &a, int &b, char op) {
-//	std::cout << "operation: " << a << " " << (char)op << " " << b << std::endl;
 	switch (op) {
 		case plus: return a + b;
 		case minus: return b - a;
