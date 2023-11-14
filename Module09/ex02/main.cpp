@@ -6,6 +6,8 @@
 #include <stdlib.h>
 
 #define BAD_NUMBER_OF_ARG 1
+#define NO_NUMBER_PROVIDED 2
+#define FORBIDDEN_CHARS 3
 
 template<typename T>
 void swap(T &a, T &b) {
@@ -37,12 +39,20 @@ void insertionSort(std::vector<int> &vector);
 void insertionSort(std::list<int> &vector);
 void parse_multiple_args(char **argv, int argc, std::list<int> &B, std::vector<int> &A);
 
+bool check_at_least_one_number(std::string argv1);
+
+bool check_forbidden_chars(std::string argv1);
+
 int main(int argc, char **argv) {
 	std::vector<int> A;
 	std::list<int> B;
 
 	if(!correct_number_of_arg(argc))
 		exit_with_error(BAD_NUMBER_OF_ARG);
+	if (!check_at_least_one_number(argv[1]))
+		exit_with_error(NO_NUMBER_PROVIDED);
+	if (!check_forbidden_chars(argv[1]))
+		exit_with_error(FORBIDDEN_CHARS);
 
 	if (argc > 2)
 		parse_multiple_args(argv, argc, B, A);
@@ -71,6 +81,25 @@ int main(int argc, char **argv) {
 	std::cout << "Time to process a range of " << B.size() << " elements with list : " << t2 << " clicks (" << ((float) t2) / CLOCKS_PER_SEC << " seconds)" << std::endl;
 
 	return 0;
+}
+
+bool check_forbidden_chars(std::string argv1) {
+	for (size_t i = 0; i < argv1.size(); i++) {
+		if (!(argv1[i] >= '0' && argv1[i] <= '9')
+			&& (argv1[i] != ' ')
+			&& (argv1[i] != '-')
+			)
+			return false;
+	}
+	return true;
+}
+
+bool check_at_least_one_number(std::string argv1) {
+	for (size_t i = 0; i < argv1.size(); i++) {
+		if (argv1[i] >= '0' && argv1[i] <= '9')
+			return true;
+	}
+	return false;
 }
 
 void parse_multiple_args(char **argv, int argc, std::list<int> &B, std::vector<int> &A) {
@@ -104,16 +133,18 @@ void insertionSort(std::vector<int> &vector) {
 	std::vector<int>::iterator tmp = A;
 
 	while (A != vector.end()) {
-		if (*A < *(A - 1)) {
-			if (tmp < A)
-				tmp = A;
-			swap(*A, *(A - 1));
+		if (A == vector.begin())
+			A++;
+		tmp = A;
+		tmp--;
+		if (*A < *(tmp)) {
+			swap(*A, *(tmp));
 			A--;
+			if (tmp != vector.begin())
+				tmp--;
 		} else {
-			if (A < tmp)
-				A = tmp;
-			else
-				A++;
+			A++;
+			tmp++;
 		}
 	}
 }
@@ -131,7 +162,8 @@ void insertionSort(std::list<int> &arr) {
 		if (*A < *(B)) {
 			swap(*A, *(B));
 			A--;
-			B--;
+			if (B != arr.begin())
+				B--;
 		} else {
 			A++;
 			B++;

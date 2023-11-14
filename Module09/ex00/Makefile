@@ -11,7 +11,7 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	c++ -Wall -Wextra -Werror -o $(NAME) $(OBJ) -std=c++98
 
-%.o: %.cpp %.hpp
+%.o: %.cpp
 	c++ -Wall -Wextra -Werror -c $< -o $@ -std=c++98
 
 clean:
