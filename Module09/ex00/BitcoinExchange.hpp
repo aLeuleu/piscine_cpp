@@ -14,10 +14,12 @@ class BitcoinExchange {
 		void processInputFile();
 		void processLine();
 		bool isValidDate(std::string date);
+		std::ifstream &getDatabaseFile();
+		std::ifstream &getInputFile();
 
 	private:
 		std::map<std::string, float>	data;
 		std::ifstream					databaseFile;
 		std::ifstream					inputFile;
-		};
+};
 #endif

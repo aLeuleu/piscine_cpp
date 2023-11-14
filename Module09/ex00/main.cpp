@@ -24,8 +24,8 @@ int main(int argc, char** argv)
 		exit(MISSING_INPUT_FILE);
 	}
 
-	openFile(bc.databaseFile, DATABASE);
-	openFile(bc.inputFile, argv[1]);
+	openFile(bc.getDatabaseFile(), DATABASE);
+	openFile(bc.getInputFile(), argv[1]);
 
 	bc.parseDB();
 

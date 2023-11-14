@@ -90,3 +90,11 @@ bool BitcoinExchange::isValidDate(std::string date) {
 		return (true);
 	return (false);
 }
+
+std::ifstream &BitcoinExchange::getDatabaseFile() {
+	return databaseFile;
+}
+
+std::ifstream &BitcoinExchange::getInputFile() {
+	return inputFile;
+}
