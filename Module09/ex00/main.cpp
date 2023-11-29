@@ -1,14 +1,14 @@
 #include <fstream>
 #include <iostream>
-#include <map>
 #include "BitcoinExchange.hpp"
+#include <stdlib.h>
 
 #define DATABASE "data.csv"
 #define MISSING_INPUT_FILE 1
 #define CANNOT_OPEN_FILE 2
 
 void	openFile(std::ifstream &stream, std::string fileName){
-	stream.open(fileName);
+	stream.open(fileName.c_str());
 	if (!stream.is_open()){
 		std::cerr << "Cannot open " << fileName << std::endl;
 		exit(CANNOT_OPEN_FILE);
